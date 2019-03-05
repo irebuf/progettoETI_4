@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7302,6 +7302,19 @@ MonoBehaviour:
   pallina12: {fileID: 1879834158}
   pallina13: {fileID: 1738442277}
   testa: {fileID: 2046155874}
+  cilindro12: {fileID: 1666608996}
+  cilindro23: {fileID: 1453742695}
+  cilindro34: {fileID: 771705140}
+  cilindro51: {fileID: 179217299}
+  cilindro65: {fileID: 4633196}
+  cilindro67: {fileID: 808763881}
+  cilindro8_11: {fileID: 1576968949}
+  cilindro1_8: {fileID: 394393458}
+  cilindro1_11: {fileID: 1372528290}
+  cilindro9_8: {fileID: 960109673}
+  cilindro9_10: {fileID: 1036758986}
+  cilindro11_12: {fileID: 1774147793}
+  cilindro12_13: {fileID: 1354499313}
   play: {fileID: 341046998}
   pausa: {fileID: 269721546}
 --- !u!4 &1706638979
