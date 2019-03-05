@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Metriche : MonoBehaviour
 {
+    Jsonfilenew ominoArancione;
+    biancogiusto ominoBiancoGiusto;
+    List<Frame> arancione, biancoGiusto;
+
+
+    private void Awake()
+    {
+        arancione = ominoArancione.frames;
+        biancoGiusto = ominoBiancoGiusto.frames;
+    }
     // Start is called before the first frame update
     void Start()
     {

@@ -49,7 +49,7 @@ public class Jsonfilenew : MonoBehaviour
     string path;
     string paths;
     string pathss;
-    List<Frame> frames = new List<Frame>();
+    public List<Frame> frames = new List<Frame>();
 
     //string contents = System.IO.File.ReadAllText(Application.DataPath + "/" + "esecuzione es1 irene con schiena storta.json");
 
