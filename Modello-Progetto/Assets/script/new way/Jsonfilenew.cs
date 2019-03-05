@@ -241,8 +241,8 @@ public class Jsonfilenew : MonoBehaviour
     void Start()
     {
 
-        path = Application.dataPath + "/" + filename;
-        paths = Application.dataPath + "/" + "provaseba.json";
+        //path = Application.dataPath + "/" + filename;
+        //paths = Application.dataPath + "/" + "provaseba.json";
         pathss = Application.dataPath + "/" + "ominoArancioneModello.json";
         //Debug.Log(paths);
         //CreateFile();
