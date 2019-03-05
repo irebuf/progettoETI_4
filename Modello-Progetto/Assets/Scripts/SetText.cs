@@ -11,14 +11,17 @@ public class SetText : MonoBehaviour
 
     public void CreateText()
     {
-        string path = Application.persistentDataPath + "/note.txt";
+        string path = Application.dataPath + "/note.txt";
         if (!File.Exists(path))
         {
             File.WriteAllText(path, testo.text+'\n');
             Debug.Log("Testo nuovo");
+        }else
+        {
+            File.AppendAllText(path, testo.text + '\n');
+            Debug.Log("Testo aggiunto");
         }
-        File.AppendAllText(path, testo.text + '\n');
-        Debug.Log("Testo aggiunto");
+        
        
     }
     /*
