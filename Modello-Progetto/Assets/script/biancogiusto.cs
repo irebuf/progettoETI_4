@@ -55,7 +55,7 @@ public class biancogiusto : MonoBehaviour
 
 
     string pathss;
-    List<Frame> frames = new List<Frame>();
+    public List<Frame> frames = new List<Frame>();
 
 
     Persona person_0 = new Persona();
