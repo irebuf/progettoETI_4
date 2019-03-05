@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class NewScript : MonoBehaviour
 {
-    public void Esercizio()
+    public void EsercizioGiusto()
     {
-        Application.LoadLevel("Esercizio");
+        Application.LoadLevel("EsercizioGiusto");
     }
 
-    public void Esercizio1()
+    public void EsercizioSbagliato()
     {
-        Application.LoadLevel("Esercizio1");
+        Application.LoadLevel("EsercizioSbagliato");
     }
 
     public void HomePage()
