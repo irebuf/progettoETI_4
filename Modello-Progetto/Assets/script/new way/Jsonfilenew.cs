@@ -134,6 +134,35 @@ public class Jsonfilenew : MonoBehaviour
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
         tornavettori();
+        movimento1 = vettori1[0];
+        movimento2 = vettori2[0];
+        movimento3 = vettori3[0];
+        movimento4 = vettori4[0];
+        movimento5 = vettori5[0];
+        movimento6 = vettori6[0];
+        movimento7 = vettori7[0];
+        movimento8 = vettori8[0];
+        movimento9 = vettori9[0];
+        movimento10 = vettori10[0];
+        movimento11 = vettori11[0];
+        movimento12 = vettori12[0];
+        movimento13 = vettori13[0];
+        movimentotesta = ((vettori16[0] + vettori17[0]) / 2);
+        testa.transform.position = movimentotesta;
+
+        pallina1.transform.position = movimento1;
+        pallina2.transform.position = movimento2;
+        pallina3.transform.position = movimento3;
+        pallina4.transform.position = movimento4;
+        pallina5.transform.position = movimento5;
+        pallina6.transform.position = movimento6;
+        pallina7.transform.position = movimento7;
+        pallina8.transform.position = movimento8;
+        pallina9.transform.position = movimento9;
+        pallina10.transform.position = movimento10;
+        pallina11.transform.position = movimento11;
+        pallina12.transform.position = movimento12;
+        pallina13.transform.position = movimento13;
 
 
     }
