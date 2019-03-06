@@ -138,7 +138,7 @@ public class biancogiusto : MonoBehaviour
 
     void Start()
     {
-        pathss = Application.dataPath + "/" + "ominoBiancoGiusto.json";
+        pathss = Application.dataPath + "/" + "ominoArancioneModello.json";
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
         tornavettori();
