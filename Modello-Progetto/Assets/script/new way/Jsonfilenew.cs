@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class Jsonfilenew : MonoBehaviour
 {
-
     int q = 0;
     int numframe;
     Vector3 movimento1;
@@ -78,11 +75,44 @@ public class Jsonfilenew : MonoBehaviour
     List<Vector3> vettori13 = new List<Vector3>();
     List<Vector3> vettori16 = new List<Vector3>();
     List<Vector3> vettori17 = new List<Vector3>();
+    //Frame frame_0 = new Frame();
+    /*Frame frame_1 = new Frame();
+    Frame frame_2 = new Frame();
+    Frame frame_3 = new Frame();
+    Frame frame_4 = new Frame();
+    Frame frame_5 = new Frame();
+    Frame frame_6 = new Frame();
+    Frame frame_7 = new Frame();
+    Frame frame_8 = new Frame();
+    Frame frame_9 = new Frame();
+    Frame frame_10 = new Frame();
+    Frame frame_11 = new Frame();
+    Frame frame_12 = new Frame();
+    Frame frame_13 = new Frame();
+    Frame frame_14 = new Frame();
+    Frame frame_15 = new Frame();
+    Frame frame_16 = new Frame();
+    Frame frame_17 = new Frame();
+    Frame frame_18 = new Frame();
+    Frame frame_19 = new Frame();
+    Frame frame_20 = new Frame();
+    Frame frame_21 = new Frame();
+    Frame frame_22 = new Frame();
+    Frame frame_23 = new Frame();
+    Frame frame_24 = new Frame();
+    Frame frame_25 = new Frame();*/
 
+    //public Frame frame_7 { get; private set; }
     public void tornavettori()
     {
         int n_ele = frames.Count;
+<<<<<<< HEAD
         //Debug.Log("dim list jsonnew "+n_ele);
+=======
+        //Debug.Log(n_ele);
+        //GameObject line12 = new GameObject();
+
+>>>>>>> parent of 7caf08e... disastro
 
 
         for (int k = 0; k < n_ele; k++)
@@ -126,8 +156,92 @@ public class Jsonfilenew : MonoBehaviour
 
 
 
+<<<<<<< HEAD
 
 
+=======
+    public List<Frame> get_data()
+    {
+
+        return frames;
+    }
+    public List<Vector3> vet1()
+    {
+        tornavettori();
+        return vettori1;
+    }
+    public List<Vector3> vet2()
+    {
+        tornavettori();
+        return vettori2;
+    }
+    public List<Vector3> vet3()
+    {
+        tornavettori();
+        return vettori3;
+    }
+    public List<Vector3> vet4()
+    {
+        tornavettori();
+        return vettori4;
+    }
+    public List<Vector3> vet5()
+    {
+        tornavettori();
+        return vettori5;
+    }
+    public List<Vector3> vet6()
+    {
+        tornavettori();
+        return vettori6;
+    }
+    public List<Vector3> vet7()
+    {
+        tornavettori();
+        return vettori7;
+    }
+    public List<Vector3> vet8()
+    {
+        tornavettori();
+        return vettori8;
+    }
+    public List<Vector3> vet9()
+    {
+        tornavettori();
+        return vettori9;
+    }
+    public List<Vector3> vet10()
+    {
+        tornavettori();
+        return vettori10;
+    }
+    public List<Vector3> vet11()
+    {
+        tornavettori();
+        return vettori11;
+    }
+    public List<Vector3> vet12()
+    {
+        tornavettori();
+        return vettori12;
+    }
+    public List<Vector3> vet13()
+    {
+        tornavettori();
+        return vettori13;
+    }
+    public List<Vector3> vet16()
+    {
+        tornavettori();
+        return vettori16;
+    }
+    public List<Vector3> vet17()
+    {
+        tornavettori();
+        return vettori17;
+    }
+    ////////////////// Start is called before the first frame update
+>>>>>>> parent of 7caf08e... disastro
     void Start()
     {
         pathss = Application.dataPath + "/" + "ominoArancioneModello.json";
@@ -165,6 +279,11 @@ public class Jsonfilenew : MonoBehaviour
         pallina12.transform.position = movimento12;
         pallina13.transform.position = movimento13;
 
+<<<<<<< HEAD
+=======
+
+    }
+>>>>>>> parent of 7caf08e... disastro
 
     }
     bool attiva = false;
@@ -418,4 +537,73 @@ public class Jsonfilenew : MonoBehaviour
         } while (contents.IndexOf("frame", 100) > 0);
     }
 
+<<<<<<< HEAD
+=======
+    /* void ReadData(string contents)
+     {
+         //Debug.Log("Reading File...");
+         try
+         {
+             if (System.IO.File.Exists(pathss))
+             {
+                 Debug.Log("Reading Existing File");
+                 //string contents = System.IO.File.ReadAllText(path);
+                 FrameWrap wrapper = JsonUtility.FromJson<FrameWrap>(contents);
+                // frame_0 = wrapper.frame_0;
+                 frame_1 = wrapper.frame_1;
+                 frame_2 = wrapper.frame_2;
+                 frame_3 = wrapper.frame_3;
+                 frame_4 = wrapper.frame_4;
+                 frame_5 = wrapper.frame_5;
+                 frame_6 = wrapper.frame_6;
+                 frame_7 = wrapper.frame_7;
+                 frame_8 = wrapper.frame_8;
+                 frame_9 = wrapper.frame_9;
+                 frame_10 = wrapper.frame_10;
+                 frame_11 = wrapper.frame_11;
+                 frame_12 = wrapper.frame_12;
+                 frame_13 = wrapper.frame_13;
+                 frame_14 = wrapper.frame_14;
+                 frame_15 = wrapper.frame_15;
+                 frame_16 = wrapper.frame_16;
+                 frame_17 = wrapper.frame_17;
+                 frame_18 = wrapper.frame_18;
+                 frame_19 = wrapper.frame_19;
+                 frame_20 = wrapper.frame_20;
+                 frame_21 = wrapper.frame_21;
+                 frame_22 = wrapper.frame_22;
+                 frame_23 = wrapper.frame_23;
+                 frame_24 = wrapper.frame_24;
+                 frame_25 = wrapper.frame_25;
+
+                 Debug.Log(  "x: " + frame_2.person_0.joint_0.x +
+                           ", y: " + frame_2.person_0.joint_0.y +
+                           ", z: " + frame_2.person_0.joint_0.z
+                           );
+             }
+             else
+             {
+                 Debug.Log("unable to read file : STATO BAD");
+                 //frame_0 = new Frame();
+             }
+         }
+         catch (System.Exception ex)
+         {
+             Debug.Log(ex.Message);
+         }
+     }
+
+
+     */
+
+
+
+
+
+
+
+
+
+
+>>>>>>> parent of 7caf08e... disastro
 }
