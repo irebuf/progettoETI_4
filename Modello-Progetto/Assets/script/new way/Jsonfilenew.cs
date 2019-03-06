@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class Jsonfilenew : MonoBehaviour
 {
+
     int q = 0;
    
     Vector3 movimento1;
@@ -74,39 +77,12 @@ public class Jsonfilenew : MonoBehaviour
     //List<Vector3> vettori15 = new List<Vector3>();
     List<Vector3> vettori16 = new List<Vector3>();
     List<Vector3> vettori17 = new List<Vector3>();
-    //Frame frame_0 = new Frame();
-    /*Frame frame_1 = new Frame();
-    Frame frame_2 = new Frame();
-    Frame frame_3 = new Frame();
-    Frame frame_4 = new Frame();
-    Frame frame_5 = new Frame();
-    Frame frame_6 = new Frame();
-    Frame frame_7 = new Frame();
-    Frame frame_8 = new Frame();
-    Frame frame_9 = new Frame();
-    Frame frame_10 = new Frame();
-    Frame frame_11 = new Frame();
-    Frame frame_12 = new Frame();
-    Frame frame_13 = new Frame();
-    Frame frame_14 = new Frame();
-    Frame frame_15 = new Frame();
-    Frame frame_16 = new Frame();
-    Frame frame_17 = new Frame();
-    Frame frame_18 = new Frame();
-    Frame frame_19 = new Frame();
-    Frame frame_20 = new Frame();
-    Frame frame_21 = new Frame();
-    Frame frame_22 = new Frame();
-    Frame frame_23 = new Frame();
-    Frame frame_24 = new Frame();
-    Frame frame_25 = new Frame();*/
 
-    //public Frame frame_7 { get; private set; }
     public void tornavettori()
     {
         //List<Frame> frames = altro.get_data();
         int n_ele = frames.Count;
-        //Debug.Log(n_ele);
+        Debug.Log("dim list jsonnew "+n_ele);
         //GameObject line12 = new GameObject();
 
 
@@ -157,10 +133,10 @@ public class Jsonfilenew : MonoBehaviour
 
 
 
-    public List<Frame> get_data()
+    public ref List<Frame> get_data()
     {
 
-        return frames;
+        return ref frames;
     }
     public List<Vector3> vet1()
     {
@@ -238,6 +214,7 @@ public class Jsonfilenew : MonoBehaviour
         return vettori17;
     }
     ////////////////// Start is called before the first frame update
+
     void Start()
     {
 
@@ -250,7 +227,6 @@ public class Jsonfilenew : MonoBehaviour
         // contents=sostituisci_frame(contents);
         //ReadData(contents);
         acquisisci_frame(contents);
-
 
     }
 
@@ -578,62 +554,7 @@ public class Jsonfilenew : MonoBehaviour
 
     }
 
-    /* void ReadData(string contents)
-     {
-         //Debug.Log("Reading File...");
-         try
-         {
-             if (System.IO.File.Exists(pathss))
-             {
-                 Debug.Log("Reading Existing File");
-                 //string contents = System.IO.File.ReadAllText(path);
-                 FrameWrap wrapper = JsonUtility.FromJson<FrameWrap>(contents);
-                // frame_0 = wrapper.frame_0;
-                 frame_1 = wrapper.frame_1;
-                 frame_2 = wrapper.frame_2;
-                 frame_3 = wrapper.frame_3;
-                 frame_4 = wrapper.frame_4;
-                 frame_5 = wrapper.frame_5;
-                 frame_6 = wrapper.frame_6;
-                 frame_7 = wrapper.frame_7;
-                 frame_8 = wrapper.frame_8;
-                 frame_9 = wrapper.frame_9;
-                 frame_10 = wrapper.frame_10;
-                 frame_11 = wrapper.frame_11;
-                 frame_12 = wrapper.frame_12;
-                 frame_13 = wrapper.frame_13;
-                 frame_14 = wrapper.frame_14;
-                 frame_15 = wrapper.frame_15;
-                 frame_16 = wrapper.frame_16;
-                 frame_17 = wrapper.frame_17;
-                 frame_18 = wrapper.frame_18;
-                 frame_19 = wrapper.frame_19;
-                 frame_20 = wrapper.frame_20;
-                 frame_21 = wrapper.frame_21;
-                 frame_22 = wrapper.frame_22;
-                 frame_23 = wrapper.frame_23;
-                 frame_24 = wrapper.frame_24;
-                 frame_25 = wrapper.frame_25;
 
-                 Debug.Log(  "x: " + frame_2.person_0.joint_0.x +
-                           ", y: " + frame_2.person_0.joint_0.y +
-                           ", z: " + frame_2.person_0.joint_0.z
-                           );
-             }
-             else
-             {
-                 Debug.Log("unable to read file : STATO BAD");
-                 //frame_0 = new Frame();
-             }
-         }
-         catch (System.Exception ex)
-         {
-             Debug.Log(ex.Message);
-         }
-     }
-
-
-     */
 
 
 

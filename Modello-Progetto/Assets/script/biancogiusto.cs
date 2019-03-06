@@ -79,7 +79,7 @@ public class biancogiusto : MonoBehaviour
     public void tornavettori()
     {
         int n_ele = frames.Count;
-
+        Debug.Log("dim lista bianco giusto "+n_ele);
 
 
         for (int k = 0; k < n_ele; k++)
@@ -209,7 +209,6 @@ public class biancogiusto : MonoBehaviour
         pathss = Application.dataPath + "/" + "ominoBiancoGiusto.json";
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
-
 
     }
     bool attiva = false;

@@ -4,48 +4,50 @@ using UnityEngine;
 
 public class Metriche : MonoBehaviour
 {
-    //Jsonfilenew ominoArancione;
-    //biancogiusto ominoBiancoGiusto;
+
     List<Frame> arancione, biancoGiusto;
-    GameObject tmpArancione, tmpBianco;
     bool appoggio = true;
+    Jsonfilenew tmp;
+    biancogiusto mpt;
 
     private void Awake()
     {
-        arancione = new List<Frame>();
-        biancoGiusto = new List<Frame>();
-        tmpBianco = new GameObject();
-        tmpArancione = new GameObject();
+        tmp = gameObject.AddComponent<Jsonfilenew>();
+        mpt = gameObject.AddComponent<biancogiusto>();
 
     }
     // Start is called before the first frame update
     void Start()
     {
+        arancione = new List<Frame>();
+        biancoGiusto = new List<Frame>();
 
     }
-
+    int intt=0;
     // Update is called once per frame
     void Update()
     {
-        if (appoggio == true)
+        if(intt<12)intt++;
+        if (intt==10 && appoggio == true)
         {
-            Jsonfilenew ominoArancioneTMP = tmpArancione.GetComponent<Jsonfilenew>();
-            biancogiusto ominoBiancoGiustoTMP = tmpBianco.GetComponent<biancogiusto>();
-
-            arancione = ominoArancioneTMP.frames;
-            biancoGiusto = ominoBiancoGiustoTMP.frames;
+            arancione = tmp.frames;
+            biancoGiusto = mpt.frames;
+            Debug.Log("dim lista arancione: " + arancione.Count);
+            Debug.Log("dim lista bianca: " + biancoGiusto.Count);
             appoggio = false;
-            Debug.Log(arancione.Count);
-            Debug.Log(biancoGiusto.Count);
         }
 
 
 
 
-        /*for (int i=0; i<50; ++i)
-        {
-            Debug.Log(arancione[i*2].person_0.joint_4.x);
-        }*/
 
     }
+
+
+
+
+
+
+
+
 }
