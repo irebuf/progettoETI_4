@@ -542,10 +542,10 @@ RectTransform:
   m_Father: {fileID: 1695641445}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -211, y: -155}
-  m_SizeDelta: {x: 32, y: 32}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 274, y: 45.5}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &79964667
 MonoBehaviour:
@@ -758,7 +758,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.11712353, g: 0.5283019, b: 0.123392224, a: 0}
+  m_BackGroundColor: {r: 0.20754719, g: 0.1771983, b: 0.18572327, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -766,7 +766,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.24
+    x: 0.28
     y: 0.2
     width: 0.17
     height: 0.65
@@ -1218,10 +1218,10 @@ RectTransform:
   m_Father: {fileID: 1695641445}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -307, y: -155}
-  m_SizeDelta: {x: 32, y: 32}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 154, y: 45.5}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250035271
 MonoBehaviour:
@@ -1358,10 +1358,10 @@ RectTransform:
   m_Father: {fileID: 1695641445}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -243, y: -155}
-  m_SizeDelta: {x: 32, y: 32}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 234, y: 45.5}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269721546
 MonoBehaviour:
@@ -1605,10 +1605,10 @@ RectTransform:
   m_Father: {fileID: 1695641445}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -275, y: -155}
-  m_SizeDelta: {x: 32, y: 32}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 194, y: 45.5}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341046998
 MonoBehaviour:
@@ -2271,10 +2271,10 @@ RectTransform:
   m_Father: {fileID: 2125553109}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.535, y: 1}
-  m_AnchorMax: {x: 0.535, y: 1}
-  m_AnchoredPosition: {x: 158.55994, y: -17.994995}
-  m_SizeDelta: {x: 319.36, y: 35.3}
+  m_AnchorMin: {x: 0.53375, y: 1}
+  m_AnchorMax: {x: 0.53375, y: 1}
+  m_AnchoredPosition: {x: 159.55994, y: -17.625}
+  m_SizeDelta: {x: 319.36, y: 35.249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522401852
 MonoBehaviour:
@@ -2522,10 +2522,10 @@ RectTransform:
   m_Father: {fileID: 2125553109}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.06875, y: 1}
-  m_AnchorMax: {x: 0.06875, y: 1}
-  m_AnchoredPosition: {x: 159.19, y: -17.994995}
-  m_SizeDelta: {x: 317.86, y: 35.3}
+  m_AnchorMin: {x: 0.0675, y: 1}
+  m_AnchorMax: {x: 0.0675, y: 1}
+  m_AnchoredPosition: {x: 159.44002, y: -17.625}
+  m_SizeDelta: {x: 319.36, y: 35.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &561967083
 MonoBehaviour:
@@ -5959,8 +5959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.46625003, y: 1}
   m_AnchorMax: {x: 0.46625003, y: 1}
-  m_AnchoredPosition: {x: 27.000011, y: -18.394989}
-  m_SizeDelta: {x: 53.76001, y: 35.25}
+  m_AnchoredPosition: {x: 27.000011, y: -17.62499}
+  m_SizeDelta: {x: 53.76, y: 35.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1457486393
 MonoBehaviour:
@@ -6417,7 +6417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 28.369995, y: -17.994995}
+  m_AnchoredPosition: {x: 26.880005, y: -17.624998}
   m_SizeDelta: {x: 53.76001, y: 35.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529440754
@@ -8168,7 +8168,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215688, g: 0.30616805, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.20754719, g: 0.1771983, b: 0.18572327, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -8176,7 +8176,7 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.035
+    x: 0.085
     y: 0.2
     width: 0.17
     height: 0.65
