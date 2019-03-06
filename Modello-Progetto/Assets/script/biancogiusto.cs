@@ -171,12 +171,14 @@ public class biancogiusto : MonoBehaviour
     bool attiva = false;
     public Button play;
     public Button pausa;
+    public Button framemin;
 
     public void Parti()
     {
         attiva = true;
         play.GetComponent<Button>().interactable = false;
         pausa.GetComponent<Button>().interactable = true;
+        framemin.GetComponent<Button>().interactable = true;
     }
     public void Ferma()
     {
@@ -187,7 +189,8 @@ public class biancogiusto : MonoBehaviour
     public void FramePlus()
     {
         attiva = false;
-        
+        play.GetComponent<Button>().interactable = true;
+        pausa.GetComponent<Button>().interactable = false;
         if (q % frame_rate == 0)
         {
             movimento1 = vettori1[q / frame_rate];
@@ -229,8 +232,14 @@ public class biancogiusto : MonoBehaviour
 
     public void FrameMinus()
     {
+        if (q == 0)
+        {
+
+            return;
+        }
         attiva = false;
-        
+        play.GetComponent<Button>().interactable = true;
+        pausa.GetComponent<Button>().interactable = false;
         if (q % frame_rate == 0)
         {
             movimento1 = vettori1[q / frame_rate];
