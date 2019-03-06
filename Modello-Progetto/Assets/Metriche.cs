@@ -12,13 +12,14 @@ public class Metriche : MonoBehaviour
 
     private void Awake()
     {
-        tmp = gameObject.AddComponent<Jsonfilenew>();
-        mpt = gameObject.AddComponent<biancogiusto>();
+
 
     }
     // Start is called before the first frame update
     void Start()
     {
+        tmp = gameObject.AddComponent<Jsonfilenew>();
+        mpt = gameObject.AddComponent<biancogiusto>();
         arancione = new List<Frame>();
         biancoGiusto = new List<Frame>();
 
