@@ -147,8 +147,7 @@ public class Jsonfilenew : MonoBehaviour
         movimento11 = vettori11[0];
         movimento12 = vettori12[0];
         movimento13 = vettori13[0];
-        
-        movimentotesta = ( ( vettori16[0] + vettori17[0]) / 2);
+        movimentotesta = ((vettori16[0] + vettori17[0]) / 2);
         testa.transform.position = movimentotesta;
 
         pallina1.transform.position = movimento1;
