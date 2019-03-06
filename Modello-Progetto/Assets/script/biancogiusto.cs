@@ -83,11 +83,7 @@ public class biancogiusto : MonoBehaviour
     {
         int n_ele = frames.Count;
 <<<<<<< HEAD
-<<<<<<< HEAD
         //Debug.Log("dim list jsonnew "+n_ele);
-=======
-
->>>>>>> parent of 7caf08e... disastro
 =======
 
 >>>>>>> parent of 7caf08e... disastro
@@ -171,7 +167,6 @@ public class biancogiusto : MonoBehaviour
         pallina11.transform.position = movimento11;
         pallina12.transform.position = movimento12;
         pallina13.transform.position = movimento13;
-
 
 
 

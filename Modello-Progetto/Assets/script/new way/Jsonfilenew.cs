@@ -107,11 +107,8 @@ public class Jsonfilenew : MonoBehaviour
     {
         int n_ele = frames.Count;
 <<<<<<< HEAD
-<<<<<<< HEAD
         //Debug.Log("dim list jsonnew "+n_ele);
 =======
-=======
->>>>>>> parent of 7caf08e... disastro
         //Debug.Log(n_ele);
         //GameObject line12 = new GameObject();
 
@@ -160,12 +157,9 @@ public class Jsonfilenew : MonoBehaviour
 
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 
 =======
-=======
->>>>>>> parent of 7caf08e... disastro
     public List<Frame> get_data()
     {
 
@@ -247,9 +241,6 @@ public class Jsonfilenew : MonoBehaviour
         return vettori17;
     }
     ////////////////// Start is called before the first frame update
-<<<<<<< HEAD
->>>>>>> parent of 7caf08e... disastro
-=======
 >>>>>>> parent of 7caf08e... disastro
     void Start()
     {
@@ -290,7 +281,6 @@ public class Jsonfilenew : MonoBehaviour
 
 <<<<<<< HEAD
 =======
-
 
     }
 >>>>>>> parent of 7caf08e... disastro
@@ -548,10 +538,7 @@ public class Jsonfilenew : MonoBehaviour
     }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of 7caf08e... disastro
     /* void ReadData(string contents)
      {
          //Debug.Log("Reading File...");
