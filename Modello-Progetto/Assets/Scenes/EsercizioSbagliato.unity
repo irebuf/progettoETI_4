@@ -4565,6 +4565,7 @@ MonoBehaviour:
   pallina12: {fileID: 938060061}
   pallina13: {fileID: 2074064082}
   testa: {fileID: 961913727}
+  frames: []
   play: {fileID: 341046998}
   pausa: {fileID: 269721546}
 --- !u!4 &1180897439
@@ -6598,7 +6599,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4811321, g: 0.13389997, b: 0.23072419, a: 0}
+  m_BackGroundColor: {r: 0.5294118, g: 0.14901961, b: 0.25882354, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -7302,6 +7303,7 @@ MonoBehaviour:
   pallina12: {fileID: 1879834158}
   pallina13: {fileID: 1738442277}
   testa: {fileID: 2046155874}
+  frames: []
   play: {fileID: 341046998}
   pausa: {fileID: 269721546}
 --- !u!4 &1706638979
