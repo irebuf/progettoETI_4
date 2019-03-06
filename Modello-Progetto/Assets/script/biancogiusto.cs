@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class biancogiusto : MonoBehaviour
 {
     int q = 0;
-
+    int numframe;
     Vector3 movimento1;
     Vector3 movimento2;
     Vector3 movimento3;
@@ -117,99 +117,26 @@ public class biancogiusto : MonoBehaviour
             vettori17.Add(a17);
 
         }
+        numframe=vettori1.Count;
 
     }
-
-
-
     public List<Frame> get_data()
     {
 
         return frames;
     }
-    public List<Vector3> vet1()
-    {
-        tornavettori();
-        return vettori1;
-    }
-    public List<Vector3> vet2()
-    {
-        tornavettori();
-        return vettori2;
-    }
-    public List<Vector3> vet3()
-    {
-        tornavettori();
-        return vettori3;
-    }
-    public List<Vector3> vet4()
-    {
-        tornavettori();
-        return vettori4;
-    }
-    public List<Vector3> vet5()
-    {
-        tornavettori();
-        return vettori5;
-    }
-    public List<Vector3> vet6()
-    {
-        tornavettori();
-        return vettori6;
-    }
-    public List<Vector3> vet7()
-    {
-        tornavettori();
-        return vettori7;
-    }
-    public List<Vector3> vet8()
-    {
-        tornavettori();
-        return vettori8;
-    }
-    public List<Vector3> vet9()
-    {
-        tornavettori();
-        return vettori9;
-    }
-    public List<Vector3> vet10()
-    {
-        tornavettori();
-        return vettori10;
-    }
-    public List<Vector3> vet11()
-    {
-        tornavettori();
-        return vettori11;
-    }
-    public List<Vector3> vet12()
-    {
-        tornavettori();
-        return vettori12;
-    }
-    public List<Vector3> vet13()
-    {
-        tornavettori();
-        return vettori13;
-    }
-    public List<Vector3> vet16()
-    {
-        tornavettori();
-        return vettori16;
-    }
-    public List<Vector3> vet17()
-    {
-        tornavettori();
-        return vettori17;
-    }
     ////////////////// Start is called before the first frame update
+     /*private void Awake()
+    {
+        tornavettori();
+    }*/
     void Start()
     {
 
         pathss = Application.dataPath + "/" + "ominoBiancoGiusto.json";
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
-
+        tornavettori();
 
     }
     bool attiva = false;
@@ -231,23 +158,23 @@ public class biancogiusto : MonoBehaviour
     public void FramePlus()
     {
         attiva = false;
-        int n = vet1().Count;
+        
         if (q % frame_rate == 0)
         {
-            movimento1 = vet1()[q / frame_rate];
-            movimento2 = vet2()[q / frame_rate];
-            movimento3 = vet3()[q / frame_rate];
-            movimento4 = vet4()[q / frame_rate];
-            movimento5 = vet5()[q / frame_rate];
-            movimento6 = vet6()[q / frame_rate];
-            movimento7 = vet7()[q / frame_rate];
-            movimento8 = vet8()[q / frame_rate];
-            movimento9 = vet9()[q / frame_rate];
-            movimento10 = vet10()[q / frame_rate];
-            movimento11 = vet11()[q / frame_rate];
-            movimento12 = vet12()[q / frame_rate];
-            movimento13 = vet13()[q / frame_rate];
-            movimentotesta = ((vet16()[q / frame_rate] + vet17()[q / frame_rate]) / 2);
+            movimento1 = vettori1[q / frame_rate];
+            movimento2 = vettori2[q / frame_rate];
+            movimento3 = vettori3[q / frame_rate];
+            movimento4 = vettori4[q / frame_rate];
+            movimento5 = vettori5[q / frame_rate];
+            movimento6 = vettori6[q / frame_rate];
+            movimento7 = vettori7[q / frame_rate];
+            movimento8 = vettori8[q / frame_rate];
+            movimento9 = vettori9[q / frame_rate];
+            movimento10 = vettori10[q / frame_rate];
+            movimento11 = vettori11[q / frame_rate];
+            movimento12 = vettori12[q / frame_rate];
+            movimento13 = vettori13[q / frame_rate];
+            movimentotesta = ((vettori16[q / frame_rate] + vettori17[q / frame_rate]) / 2);
             testa.transform.position = movimentotesta;
 
 
@@ -267,30 +194,30 @@ public class biancogiusto : MonoBehaviour
 
         }
         q++;
-        if (q > n * frame_rate) { q = 0; }
+        if (q > numframe * frame_rate) { q = 0; }
 
     }
 
     public void FrameMinus()
     {
         attiva = false;
-        int n = vet1().Count;
+        
         if (q % frame_rate == 0)
         {
-            movimento1 = vet1()[q / frame_rate];
-            movimento2 = vet2()[q / frame_rate];
-            movimento3 = vet3()[q / frame_rate];
-            movimento4 = vet4()[q / frame_rate];
-            movimento5 = vet5()[q / frame_rate];
-            movimento6 = vet6()[q / frame_rate];
-            movimento7 = vet7()[q / frame_rate];
-            movimento8 = vet8()[q / frame_rate];
-            movimento9 = vet9()[q / frame_rate];
-            movimento10 = vet10()[q / frame_rate];
-            movimento11 = vet11()[q / frame_rate];
-            movimento12 = vet12()[q / frame_rate];
-            movimento13 = vet13()[q / frame_rate];
-            movimentotesta = ((vet16()[q / frame_rate] + vet17()[q / frame_rate]) / 2);
+            movimento1 = vettori1[q / frame_rate];
+            movimento2 = vettori2[q / frame_rate];
+            movimento3 = vettori3[q / frame_rate];
+            movimento4 = vettori4[q / frame_rate];
+            movimento5 = vettori5[q / frame_rate];
+            movimento6 = vettori6[q / frame_rate];
+            movimento7 = vettori7[q / frame_rate];
+            movimento8 = vettori8[q / frame_rate];
+            movimento9 = vettori9[q / frame_rate];
+            movimento10 = vettori10[q / frame_rate];
+            movimento11 = vettori11[q / frame_rate];
+            movimento12 = vettori12[q / frame_rate];
+            movimento13 = vettori13[q / frame_rate];
+            movimentotesta = ((vettori16[q / frame_rate] + vettori17[q / frame_rate]) / 2);
             testa.transform.position = movimentotesta;
 
 
@@ -310,7 +237,7 @@ public class biancogiusto : MonoBehaviour
 
         }
         q--;
-        if (q > n * frame_rate) { q = 0; }
+        if (q > numframe * frame_rate) { q = 0; }
 
     }
 
@@ -320,23 +247,23 @@ public class biancogiusto : MonoBehaviour
     {
         if (attiva == true)
         {
-            int n = vet1().Count;
+            
             if (q % frame_rate == 0)
             {
-                movimento1 = vet1()[q / frame_rate];
-                movimento2 = vet2()[q / frame_rate];
-                movimento3 = vet3()[q / frame_rate];
-                movimento4 = vet4()[q / frame_rate];
-                movimento5 = vet5()[q / frame_rate];
-                movimento6 = vet6()[q / frame_rate];
-                movimento7 = vet7()[q / frame_rate];
-                movimento8 = vet8()[q / frame_rate];
-                movimento9 = vet9()[q / frame_rate];
-                movimento10 = vet10()[q / frame_rate];
-                movimento11 = vet11()[q / frame_rate];
-                movimento12 = vet12()[q / frame_rate];
-                movimento13 = vet13()[q / frame_rate];
-                movimentotesta = ((vet16()[q / frame_rate] + vet17()[q / frame_rate]) / 2);
+                movimento1 = vettori1[q / frame_rate];
+                movimento2 = vettori2[q / frame_rate];
+                movimento3 = vettori3[q / frame_rate];
+                movimento4 = vettori4[q / frame_rate];
+                movimento5 = vettori5[q / frame_rate];
+                movimento6 = vettori6[q / frame_rate];
+                movimento7 = vettori7[q / frame_rate];
+                movimento8 = vettori8[q / frame_rate];
+                movimento9 = vettori9[q / frame_rate];
+                movimento10 = vettori10[q / frame_rate];
+                movimento11 = vettori11[q / frame_rate];
+                movimento12 = vettori12[q / frame_rate];
+                movimento13 = vettori13[q / frame_rate];
+                movimentotesta = ((vettori16[q / frame_rate] + vettori17[q / frame_rate]) / 2);
                 testa.transform.position = movimentotesta;
 
                 pallina1.transform.position = movimento1;
@@ -354,7 +281,7 @@ public class biancogiusto : MonoBehaviour
                 pallina13.transform.position = movimento13;
             }
             q++;
-            if (q > n * frame_rate) { q = 0; }
+            if (q >= numframe * frame_rate) { Ferma();q = 0; }
             coloramateriale();
             
         }
@@ -429,7 +356,7 @@ public class biancogiusto : MonoBehaviour
         int i = 0;
         int pos = 0;
 
-        Debug.Log(contents);
+       // Debug.Log(contents);
         do
         {
             int ini = contents.IndexOf("frame", pos);
