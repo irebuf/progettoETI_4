@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1258,7 +1258,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 250035272}
   m_OnClick:
     m_PersistentCalls:
@@ -4565,9 +4565,23 @@ MonoBehaviour:
   pallina12: {fileID: 938060061}
   pallina13: {fileID: 2074064082}
   testa: {fileID: 961913727}
+  cilindro12: {fileID: 0}
+  cilindro23: {fileID: 0}
+  cilindro34: {fileID: 0}
+  cilindro51: {fileID: 0}
+  cilindro65: {fileID: 0}
+  cilindro67: {fileID: 0}
+  cilindro8_11: {fileID: 0}
+  cilindro1_8: {fileID: 0}
+  cilindro1_11: {fileID: 0}
+  cilindro9_8: {fileID: 0}
+  cilindro9_10: {fileID: 0}
+  cilindro11_12: {fileID: 0}
+  cilindro12_13: {fileID: 0}
   frames: []
   play: {fileID: 341046998}
   pausa: {fileID: 269721546}
+  framemin: {fileID: 250035271}
 --- !u!4 &1180897439
 Transform:
   m_ObjectHideFlags: 0
@@ -7303,9 +7317,23 @@ MonoBehaviour:
   pallina12: {fileID: 1879834158}
   pallina13: {fileID: 1738442277}
   testa: {fileID: 2046155874}
+  cilindro12: {fileID: 0}
+  cilindro23: {fileID: 0}
+  cilindro34: {fileID: 0}
+  cilindro51: {fileID: 0}
+  cilindro65: {fileID: 0}
+  cilindro67: {fileID: 0}
+  cilindro8_11: {fileID: 0}
+  cilindro1_8: {fileID: 0}
+  cilindro1_11: {fileID: 0}
+  cilindro9_8: {fileID: 0}
+  cilindro9_10: {fileID: 0}
+  cilindro11_12: {fileID: 0}
+  cilindro12_13: {fileID: 0}
   frames: []
   play: {fileID: 341046998}
   pausa: {fileID: 269721546}
+  framemin: {fileID: 250035271}
 --- !u!4 &1706638979
 Transform:
   m_ObjectHideFlags: 0
