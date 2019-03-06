@@ -84,6 +84,7 @@ public class biancogiusto : MonoBehaviour
         int n_ele = frames.Count;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Debug.Log("dim list jsonnew "+n_ele);
 =======
 
@@ -91,6 +92,9 @@ public class biancogiusto : MonoBehaviour
 =======
 
 >>>>>>> parent of 7caf08e... disastro
+=======
+        Debug.Log("dim lista bianco giusto "+n_ele);
+>>>>>>> parent of 043fdea... Merge remote-tracking branch 'origin/master'
 
 
         for (int k = 0; k < n_ele; k++)

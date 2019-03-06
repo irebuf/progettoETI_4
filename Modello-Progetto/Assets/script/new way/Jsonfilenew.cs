@@ -108,6 +108,7 @@ public class Jsonfilenew : MonoBehaviour
         int n_ele = frames.Count;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         //Debug.Log("dim list jsonnew "+n_ele);
 =======
 =======
@@ -116,6 +117,9 @@ public class Jsonfilenew : MonoBehaviour
         //GameObject line12 = new GameObject();
 
 >>>>>>> parent of 7caf08e... disastro
+=======
+        Debug.Log("dim list jsonnew "+n_ele);
+>>>>>>> parent of 043fdea... Merge remote-tracking branch 'origin/master'
 
 
         for (int k = 0; k < n_ele; k++)
