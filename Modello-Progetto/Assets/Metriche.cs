@@ -15,7 +15,7 @@ public class Metriche : MonoBehaviour
     int frame_correnteArancione, frame_correnteBianco;
     bool attiva = false;
     public bool sogliaManoSx, sogliaManoDx, sogliaGomitoSx, sogliaGomitoDx, sogliaSpallaSx, sogliaSpallaDx;
-    public float treshold;
+    public float threshold;
     public Button play;
     public Button pausa;
     public Button framemin;
@@ -37,7 +37,7 @@ public class Metriche : MonoBehaviour
         //Debug.Log("dim biancoGiusto : " + biancoGiusto.Count);
         dimBoa = arancione.Count/10;
         frameRate = 1;
-        treshold = 0.05f;
+        threshold = 0.05f;
     }
 
 
@@ -60,12 +60,12 @@ public class Metriche : MonoBehaviour
             if (frame_correnteArancione < arancione.Count-1) frame_correnteArancione++;
             if (frame_correnteBianco == biancoGiusto.Count-1 && frame_correnteArancione == arancione.Count-1) { ferma(); frame_correnteArancione=0; frame_correnteBianco=0; }
 
-            if (manoSx < treshold) sogliaManoSx = true; else sogliaManoSx = false;
-            if (manoDx < treshold) sogliaManoDx = true; else sogliaManoDx = false;
-            if (gomitoSx < treshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
-            if (gomitoDx < treshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
-            if (spallaSx < treshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
-            if (spallaDx < treshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+            if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
+            if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
+            if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
+            if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
+            if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
+            if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
             //manca la percentuale
 
@@ -107,12 +107,12 @@ public class Metriche : MonoBehaviour
             spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
             spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
 
-        if (manoSx < treshold) sogliaManoSx = true; else sogliaManoSx = false;
-        if (manoDx < treshold) sogliaManoDx = true; else sogliaManoDx = false;
-        if (gomitoSx < treshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
-        if (gomitoDx < treshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
-        if (spallaSx < treshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
-        if (spallaDx < treshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+        if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
+        if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
+        if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
+        if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
+        if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
+        if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
         if (frame_correnteBianco < (biancoGiusto.Count -1 )) frame_correnteBianco++;
         if (frame_correnteArancione < (arancione.Count -1)) frame_correnteArancione++;
@@ -140,12 +140,12 @@ public class Metriche : MonoBehaviour
             spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
             spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
 
-        if (manoSx < treshold) sogliaManoSx = true; else sogliaManoSx = false;
-        if (manoDx < treshold) sogliaManoDx = true; else sogliaManoDx = false;
-        if (gomitoSx < treshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
-        if (gomitoDx < treshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
-        if (spallaSx < treshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
-        if (spallaDx < treshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+        if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
+        if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
+        if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
+        if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
+        if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
+        if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
         if ( frame_correnteBianco > 0 ) frame_correnteBianco--;
         if ( frame_correnteArancione > 0 ) frame_correnteArancione--;
