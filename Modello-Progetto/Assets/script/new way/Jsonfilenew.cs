@@ -132,6 +132,7 @@ public class Jsonfilenew : MonoBehaviour
     {
         pathss = Application.dataPath + "/" + "ominoArancioneModello.json";
         string contents = System.IO.File.ReadAllText(pathss);
+        testa = new GameObject();
         acquisisci_frame(contents);
         tornavettori();
         movimento1 = vettori1[0];
