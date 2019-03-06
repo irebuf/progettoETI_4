@@ -82,12 +82,7 @@ public class Jsonfilenew : MonoBehaviour
     public void tornavettori()
     {
         int n_ele = frames.Count;
-<<<<<<< HEAD
         Debug.Log("dim list jsonnew "+n_ele);
-        //GameObject line12 = new GameObject();
-=======
->>>>>>> 07ba58c9ae60f72ed69bdbe5ab7827f13da4fe7e
-
 
 
         for (int k = 0; k < n_ele; k++)
@@ -128,36 +123,18 @@ public class Jsonfilenew : MonoBehaviour
         numframe = vettori1.Count;
 
     }
-<<<<<<< HEAD
 
 
 
-    public ref List<Frame> get_data()
-=======
-    public List<Frame> get_data()
->>>>>>> 07ba58c9ae60f72ed69bdbe5ab7827f13da4fe7e
-    {
 
-        return ref frames;
-    }
-    ////////////////// Start is called before the first frame update
-<<<<<<< HEAD
 
-=======
-    /*private void Awake()
-   {
-       tornavettori();
-   }*/
->>>>>>> 07ba58c9ae60f72ed69bdbe5ab7827f13da4fe7e
     void Start()
     {
         pathss = Application.dataPath + "/" + "ominoArancioneModello.json";
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
-<<<<<<< HEAD
-=======
         tornavettori();
->>>>>>> 07ba58c9ae60f72ed69bdbe5ab7827f13da4fe7e
+
 
     }
     bool attiva = false;
@@ -410,19 +387,5 @@ public class Jsonfilenew : MonoBehaviour
             contents = contents.Remove(contents.IndexOf('{', 0) + 1, el - (contents.IndexOf('{', 0) + 2));
         } while (contents.IndexOf("frame", 100) > 0);
     }
-<<<<<<< HEAD
 
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 07ba58c9ae60f72ed69bdbe5ab7827f13da4fe7e
 }

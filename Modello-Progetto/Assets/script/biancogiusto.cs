@@ -136,10 +136,8 @@ public class biancogiusto : MonoBehaviour
         pathss = Application.dataPath + "/" + "ominoBiancoGiusto.json";
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
-<<<<<<< HEAD
-=======
+
         tornavettori();
->>>>>>> 07ba58c9ae60f72ed69bdbe5ab7827f13da4fe7e
 
     }
     bool attiva = false;
