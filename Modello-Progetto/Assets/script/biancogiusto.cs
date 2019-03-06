@@ -79,7 +79,7 @@ public class biancogiusto : MonoBehaviour
     public void tornavettori()
     {
         int n_ele = frames.Count;
-        //Debug.Log("dim lista bianco giusto "+n_ele);
+        Debug.Log("dim lista bianco giusto "+n_ele);
 
 
         for (int k = 0; k < n_ele; k++)
