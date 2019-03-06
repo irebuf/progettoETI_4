@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Metriche : MonoBehaviour
 {
-
+    public int range;
     public List<Frame> arancione, biancoGiusto;
     string pathArancione;
     string pathBianco;
     public int frameRate;
-    int dimBoa;
+    int dimBoa, appoggio, percentuale;
     public float manoSx, manoDx, gomitoSx, gomitoDx, spallaSx, spallaDx;
     int frame_correnteArancione, frame_correnteBianco;
     bool attiva = false;
@@ -26,14 +26,15 @@ public class Metriche : MonoBehaviour
         pathBianco = Application.dataPath + "/" + "ominoBiancoGiusto.json";
         arancione = new List<Frame>();
         biancoGiusto = new List<Frame>();
-
+        appoggio = 1;
         string contentArancione = System.IO.File.ReadAllText(pathArancione);
         string contentBianco = System.IO.File.ReadAllText(pathBianco);
         acquisisci_frame(contentArancione, ref arancione);
         acquisisci_frame(contentBianco, ref biancoGiusto);
         dimBoa = arancione.Count/10;
         frameRate = 1;
-        threshold = 0.05f;
+        threshold = 0.1f;
+        range = 100;
     }
 
 
@@ -43,18 +44,18 @@ public class Metriche : MonoBehaviour
         {
             if (frame_correnteArancione % frameRate == 0)
             {
-                Debug.Log("arancio " + frame_correnteArancione + " bianco " + frame_correnteBianco);
-                manoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_4.x, arancione[frame_correnteArancione].person_0.joint_4.y, arancione[frame_correnteArancione].person_0.joint_4.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_4.x, biancoGiusto[frame_correnteBianco].person_0.joint_4.y, biancoGiusto[frame_correnteBianco].person_0.joint_4.z));
-                manoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_7.x, arancione[frame_correnteArancione].person_0.joint_7.y, arancione[frame_correnteArancione].person_0.joint_7.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_7.x, biancoGiusto[frame_correnteBianco].person_0.joint_7.y, biancoGiusto[frame_correnteBianco].person_0.joint_7.z));
-                gomitoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_3.x, arancione[frame_correnteArancione].person_0.joint_3.y, arancione[frame_correnteArancione].person_0.joint_3.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_3.x, biancoGiusto[frame_correnteBianco].person_0.joint_3.y, biancoGiusto[frame_correnteBianco].person_0.joint_3.z));
-                gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
-                spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
-                spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
+                //Debug.Log("arancio " + frame_correnteArancione + " bianco " + frame_correnteBianco);
+                manoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione/frameRate].person_0.joint_4.x, arancione[frame_correnteArancione / frameRate].person_0.joint_4.y, arancione[frame_correnteArancione / frameRate].person_0.joint_4.z), new Vector3(biancoGiusto[frame_correnteBianco/frameRate].person_0.joint_4.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_4.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_4.z));
+                manoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_7.x, arancione[frame_correnteArancione / frameRate].person_0.joint_7.y, arancione[frame_correnteArancione / frameRate].person_0.joint_7.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_7.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_7.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_7.z));
+                gomitoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_3.x, arancione[frame_correnteArancione / frameRate].person_0.joint_3.y, arancione[frame_correnteArancione / frameRate].person_0.joint_3.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_3.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_3.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_3.z));
+                gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_6.x, arancione[frame_correnteArancione / frameRate].person_0.joint_6.y, arancione[frame_correnteArancione / frameRate].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.z));
+                spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_2.x, arancione[frame_correnteArancione / frameRate].person_0.joint_2.y, arancione[frame_correnteArancione / frameRate].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.z));
+                spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_5.x, arancione[frame_correnteArancione / frameRate].person_0.joint_5.y, arancione[frame_correnteArancione / frameRate].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.z));
 
             }
             if (frame_correnteBianco < biancoGiusto.Count-1) frame_correnteBianco++;
             if (frame_correnteArancione < arancione.Count-1) frame_correnteArancione++;
-            if (frame_correnteBianco == biancoGiusto.Count-1 && frame_correnteArancione == arancione.Count-1) { ferma(); frame_correnteArancione=0; frame_correnteBianco=0; }
+            if (frame_correnteBianco == biancoGiusto.Count-1 && frame_correnteArancione == arancione.Count-1) { ferma(); frame_correnteArancione=0; frame_correnteBianco=0; appoggio = 1; percentuale = 0; }
 
             if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
             if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
@@ -64,11 +65,75 @@ public class Metriche : MonoBehaviour
             if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
             //manca la percentuale
+            if(frame_correnteArancione == dimBoa*appoggio)
+            {
+                if (appoggio <= 0 || appoggio > 10) appoggio = 1;
+
+                //Debug.Log("percentuale: " + 10 * appoggio + "%");
+                if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa*appoggio + " non è stata rispettata la boa");
+                Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
+                ++appoggio;
+            }
 
 
         }
 
 
+
+    }
+
+    bool boa(int nFrame)
+    {
+        int i=0;
+        if (nFrame <=  range / 2)//siamo a inizio esercizio
+        {
+            for (int j = 0; j < range*2/3 ; ++j)
+            {
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                {
+                    i += 1;
+                }
+            }
+        }
+        else if (nFrame > arancione.Count - range/2 -1 && nFrame+range/2 < biancoGiusto.Count-1 )//siamo a fine esercizio
+        {
+            for (int j = nFrame - range/2 ; j < arancione.Count-1; ++j)
+            {
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                {
+                    i += 1;
+                }
+            }
+        }
+        else if (nFrame > biancoGiusto.Count-range/2)//il tipo sta facendo l'es troppo velocemente
+        {
+            for (int j = nFrame - range / 2; j < biancoGiusto.Count - 1; ++j)
+            {
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                {
+                    i += 1;
+                }
+            }
+        }
+        else if (nFrame > range/2 || nFrame < arancione.Count - range/2 )//siamo nel vivo dell'esercizio
+        {
+            for (   int j = nFrame - range/2 + 1    ; j < nFrame + range/2 ; ++j)
+            {
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                {
+                    i += 1;
+                }
+            }
+        }
+
+        if (i>0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
 
     }
 

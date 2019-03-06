@@ -82,7 +82,7 @@ public class Jsonfilenew : MonoBehaviour
     public void tornavettori()
     {
         int n_ele = frames.Count;
-        Debug.Log("dim list jsonnew "+n_ele);
+       //Debug.Log("dim list jsonnew "+n_ele);
 
 
         for (int k = 0; k < n_ele; k++)
