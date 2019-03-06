@@ -82,11 +82,7 @@ public class biancogiusto : MonoBehaviour
     public void tornavettori()
     {
         int n_ele = frames.Count;
-<<<<<<< HEAD
         //Debug.Log("dim list jsonnew "+n_ele);
-=======
-
->>>>>>> parent of 7caf08e... disastro
 
 
         for (int k = 0; k < n_ele; k++)
@@ -167,7 +163,6 @@ public class biancogiusto : MonoBehaviour
         pallina11.transform.position = movimento11;
         pallina12.transform.position = movimento12;
         pallina13.transform.position = movimento13;
-
 
 
     }
