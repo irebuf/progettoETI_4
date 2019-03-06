@@ -191,6 +191,8 @@ public class biancogiusto : MonoBehaviour
         attiva = false;
         play.GetComponent<Button>().interactable = true;
         pausa.GetComponent<Button>().interactable = false;
+        framemin.GetComponent<Button>().interactable = true;
+        
         if (q % frame_rate == 0)
         {
             movimento1 = vettori1[q / frame_rate];
