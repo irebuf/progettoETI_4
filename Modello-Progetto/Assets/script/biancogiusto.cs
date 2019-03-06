@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-
 public class biancogiusto : MonoBehaviour
 {
-
     int q = 0;
     int numframe;
     Vector3 movimento1;
@@ -82,7 +79,7 @@ public class biancogiusto : MonoBehaviour
     public void tornavettori()
     {
         int n_ele = frames.Count;
-        //Debug.Log("dim list jsonnew "+n_ele);
+        //Debug.Log("dim lista bianco giusto "+n_ele);
 
 
         for (int k = 0; k < n_ele; k++)
@@ -120,19 +117,26 @@ public class biancogiusto : MonoBehaviour
             vettori17.Add(a17);
 
         }
-        numframe = vettori1.Count;
+        numframe=vettori1.Count;
 
     }
+    public List<Frame> get_data()
+    {
 
-
-
-
-
+        return frames;
+    }
+    ////////////////// Start is called before the first frame update
+     /*private void Awake()
+    {
+        tornavettori();
+    }*/
     void Start()
     {
-        pathss = Application.dataPath + "/" + "ominoArancioneModello.json";
+
+        pathss = Application.dataPath + "/" + "ominoBiancoGiusto.json";
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
+
         tornavettori();
         movimento1 = vettori1[0];
         movimento2 = vettori2[0];
@@ -163,8 +167,6 @@ public class biancogiusto : MonoBehaviour
         pallina11.transform.position = movimento11;
         pallina12.transform.position = movimento12;
         pallina13.transform.position = movimento13;
-
-
     }
     bool attiva = false;
     public Button play;
@@ -185,7 +187,7 @@ public class biancogiusto : MonoBehaviour
     public void FramePlus()
     {
         attiva = false;
-
+        
         if (q % frame_rate == 0)
         {
             movimento1 = vettori1[q / frame_rate];
@@ -228,7 +230,7 @@ public class biancogiusto : MonoBehaviour
     public void FrameMinus()
     {
         attiva = false;
-
+        
         if (q % frame_rate == 0)
         {
             movimento1 = vettori1[q / frame_rate];
@@ -268,13 +270,13 @@ public class biancogiusto : MonoBehaviour
 
     }
 
-
+   
     ////////////////// Update is called once per frame
     void Update()
     {
         if (attiva == true)
         {
-
+            
             if (q % frame_rate == 0)
             {
                 movimento1 = vettori1[q / frame_rate];
@@ -308,9 +310,9 @@ public class biancogiusto : MonoBehaviour
                 pallina13.transform.position = movimento13;
             }
             q++;
-            if (q >= numframe * frame_rate) { Ferma(); q = 0; }
+            if (q >= numframe * frame_rate) { Ferma();q = 0; }
             coloramateriale();
-
+            
         }
     }
     void coloramateriale()
@@ -383,7 +385,7 @@ public class biancogiusto : MonoBehaviour
         int i = 0;
         int pos = 0;
 
-        // Debug.Log(contents);
+       // Debug.Log(contents);
         do
         {
             int ini = contents.IndexOf("frame", pos);
@@ -416,5 +418,4 @@ public class biancogiusto : MonoBehaviour
             contents = contents.Remove(contents.IndexOf('{', 0) + 1, el - (contents.IndexOf('{', 0) + 2));
         } while (contents.IndexOf("frame", 100) > 0);
     }
-
 }
