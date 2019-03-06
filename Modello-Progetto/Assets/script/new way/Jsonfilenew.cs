@@ -394,7 +394,6 @@ public class Jsonfilenew : MonoBehaviour
         int i = 0;
         int pos = 0;
 
-        // Debug.Log(contents);
         do
         {
             int ini = contents.IndexOf("frame", pos);
