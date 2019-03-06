@@ -24,8 +24,6 @@ public class Metriche : MonoBehaviour
     {
         pathArancione = Application.dataPath + "/" + "ominoArancioneModello.json";
         pathBianco = Application.dataPath + "/" + "ominoBiancoGiusto.json";
-        //tmp = gameObject.AddComponent<Jsonfilenew>() as Jsonfilenew;
-        //mpt = gameObject.AddComponent<biancogiusto>() as biancogiusto;
         arancione = new List<Frame>();
         biancoGiusto = new List<Frame>();
 
@@ -33,8 +31,6 @@ public class Metriche : MonoBehaviour
         string contentBianco = System.IO.File.ReadAllText(pathBianco);
         acquisisci_frame(contentArancione, ref arancione);
         acquisisci_frame(contentBianco, ref biancoGiusto);
-        //Debug.Log("dim arancione : " + arancione.Count);
-        //Debug.Log("dim biancoGiusto : " + biancoGiusto.Count);
         dimBoa = arancione.Count/10;
         frameRate = 1;
         threshold = 0.05f;
