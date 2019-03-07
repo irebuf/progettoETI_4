@@ -64,7 +64,7 @@ public class Metriche : MonoBehaviour
             if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
             if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
-            //manca la percentuale
+            //percentuale
             if(frame_correnteArancione == dimBoa*appoggio)
             {
                 if (appoggio <= 0 || appoggio > 10) appoggio = 1;
@@ -174,6 +174,15 @@ public class Metriche : MonoBehaviour
         if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
         if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
         if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+        if (frame_correnteArancione == dimBoa * appoggio)
+        {
+            if (appoggio <= 0 || appoggio > 10) appoggio = 1;
+
+            //Debug.Log("percentuale: " + 10 * appoggio + "%");
+            if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
+            Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
+            ++appoggio;
+        }
 
         if (frame_correnteBianco < (biancoGiusto.Count -1 )) frame_correnteBianco++;
         if (frame_correnteArancione < (arancione.Count -1)) frame_correnteArancione++;
@@ -201,6 +210,15 @@ public class Metriche : MonoBehaviour
             spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
             spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
 
+        if (frame_correnteArancione == dimBoa * appoggio)
+        {
+            if (appoggio <= 0 || appoggio > 10) appoggio = 1;
+
+            //Debug.Log("percentuale: " + 10 * appoggio + "%");
+            if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
+            Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
+            ++appoggio;
+        }
         if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
         if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
         if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
