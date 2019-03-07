@@ -26,7 +26,12 @@ public class Metriche : MonoBehaviour
     public Text gomitoL;
     public Text polsoL;
     public Text percentualeSvolto;
-    public Text metricaprova;
+    public Text boolGomitoDx;
+    public Text boolGomitoSx;
+    public Text boolSpallaDx;
+    public Text boolSpallaSx;
+    public Text boolPolsoDx;
+    public Text boolPolsoSx;
 
     void Start()
     {
@@ -76,7 +81,12 @@ public class Metriche : MonoBehaviour
             if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
             if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
             if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
-            metricaprova.text = sogliaGomitoDx.ToString();
+            boolGomitoDx.text = sogliaGomitoDx.ToString();
+            boolGomitoSx.text = sogliaGomitoSx.ToString();
+            boolSpallaDx.text = sogliaSpallaDx.ToString();
+            boolSpallaSx.text = sogliaSpallaSx.ToString();
+            boolPolsoDx.text = sogliaManoDx.ToString();
+            boolPolsoSx.text = sogliaManoSx.ToString();
             //manca la percentuale
             if (frame_correnteArancione == dimBoa * appoggio)
             {
@@ -194,7 +204,12 @@ public class Metriche : MonoBehaviour
         if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
         if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
         if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
-
+        boolGomitoDx.text = sogliaGomitoDx.ToString();
+        boolGomitoSx.text = sogliaGomitoSx.ToString();
+        boolSpallaDx.text = sogliaSpallaDx.ToString();
+        boolSpallaSx.text = sogliaSpallaSx.ToString();
+        boolPolsoDx.text = sogliaManoDx.ToString();
+        boolPolsoSx.text = sogliaManoSx.ToString();
         if (frame_correnteArancione == dimBoa * appoggio)
         {
             if (appoggio <= 0 || appoggio > 10) appoggio = 1;
@@ -245,7 +260,12 @@ public class Metriche : MonoBehaviour
         if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
         if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
-       
+        boolGomitoDx.text = sogliaGomitoDx.ToString();
+        boolGomitoSx.text = sogliaGomitoSx.ToString();
+        boolSpallaDx.text = sogliaSpallaDx.ToString();
+        boolSpallaSx.text = sogliaSpallaSx.ToString();
+        boolPolsoDx.text = sogliaManoDx.ToString();
+        boolPolsoSx.text = sogliaManoSx.ToString();
 
         if (frame_correnteBianco > 0) frame_correnteBianco--;
         if (frame_correnteArancione > 0) frame_correnteArancione--;
