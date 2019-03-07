@@ -86,6 +86,7 @@ public class Metriche : MonoBehaviour
                 Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
                 ++appoggio;
                 percentaleSvolto.text = percentuale.ToString();
+
             }
 
 
