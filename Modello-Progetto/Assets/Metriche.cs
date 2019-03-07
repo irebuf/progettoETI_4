@@ -20,13 +20,6 @@ public class Metriche : MonoBehaviour
     public Button play;
     public Button pausa;
     public Button framemin;
-    public Text spallaR;
-    public Text gomitoR;
-    public Text polsoR;
-    public Text spallaL;
-    public Text gomitoL;
-    public Text polsoL;
-    public Text percentaleSvolto;
 
     void Start()
     {
@@ -59,12 +52,7 @@ public class Metriche : MonoBehaviour
                 gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_6.x, arancione[frame_correnteArancione / frameRate].person_0.joint_6.y, arancione[frame_correnteArancione / frameRate].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.z));
                 spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_2.x, arancione[frame_correnteArancione / frameRate].person_0.joint_2.y, arancione[frame_correnteArancione / frameRate].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.z));
                 spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_5.x, arancione[frame_correnteArancione / frameRate].person_0.joint_5.y, arancione[frame_correnteArancione / frameRate].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.z));
-                polsoL.text = manoSx.ToString();
-                polsoR.text = manoDx.ToString();
-                gomitoL.text = gomitoSx.ToString();
-                gomitoR.text = gomitoDx.ToString();
-                spallaL.text = spallaSx.ToString();
-                spallaR.text = spallaDx.ToString();
+
             }
             if (frame_correnteBianco < biancoGiusto.Count-1) frame_correnteBianco++;
             if (frame_correnteArancione < arancione.Count-1) frame_correnteArancione++;
@@ -78,12 +66,12 @@ public class Metriche : MonoBehaviour
             if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
 <<<<<<< HEAD
-            //percentuale
-            if(frame_correnteArancione == dimBoa*appoggio)
-=======
             //manca la percentuale
             if(frame_correnteArancione == dimBoa*appoggio)
->>>>>>> 7827ef3dd85024dffa53203cef491ea4edd1b6a5
+=======
+            //percentuale
+            if(frame_correnteArancione == dimBoa*appoggio)
+>>>>>>> parent of b58b7d0... Merge branch 'master' of https://github.com/querciak/progettoETI_2
             {
                 if (appoggio <= 0 || appoggio > 10) appoggio = 1;
 
@@ -91,11 +79,8 @@ public class Metriche : MonoBehaviour
                 if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa*appoggio + " non è stata rispettata la boa");
                 Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
                 ++appoggio;
-                percentaleSvolto.text = percentuale.ToString();
-
             }
 
-        }
 
         }
 
@@ -188,12 +173,6 @@ public class Metriche : MonoBehaviour
             gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
             spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
             spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
-            polsoL.text = manoSx.ToString();
-            polsoR.text = manoDx.ToString();
-            gomitoL.text = gomitoSx.ToString();
-            gomitoR.text = gomitoDx.ToString();
-            spallaL.text = spallaSx.ToString();
-            spallaR.text = spallaDx.ToString();
 
         if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
         if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
@@ -202,6 +181,11 @@ public class Metriche : MonoBehaviour
         if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
         if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 <<<<<<< HEAD
+
+        if (frame_correnteBianco < (biancoGiusto.Count -1 )) frame_correnteBianco++;
+        if (frame_correnteArancione < (arancione.Count -1)) frame_correnteArancione++;
+        if (frame_correnteBianco == biancoGiusto.Count-1 & frame_correnteArancione == arancione.Count-1) { frame_correnteArancione++; frame_correnteBianco++; }
+=======
         if (frame_correnteArancione == dimBoa * appoggio)
         {
             if (appoggio <= 0 || appoggio > 10) appoggio = 1;
@@ -215,12 +199,7 @@ public class Metriche : MonoBehaviour
         if (frame_correnteBianco < (biancoGiusto.Count -1 )) frame_correnteBianco++;
         if (frame_correnteArancione < (arancione.Count -1)) frame_correnteArancione++;
         if (frame_correnteBianco == biancoGiusto.Count-1 & frame_correnteArancione == arancione.Count-1) { frame_correnteArancione++; frame_correnteBianco++; }
-=======
-
-        if (frame_correnteBianco < (biancoGiusto.Count -1 )) frame_correnteBianco++;
-        if (frame_correnteArancione < (arancione.Count -1)) frame_correnteArancione++;
-        if (frame_correnteBianco == biancoGiusto.Count-1 & frame_correnteArancione == arancione.Count-1) { frame_correnteArancione++; frame_correnteBianco++; }
->>>>>>> 7827ef3dd85024dffa53203cef491ea4edd1b6a5
+>>>>>>> parent of b58b7d0... Merge branch 'master' of https://github.com/querciak/progettoETI_2
     }
     public void frameMinus()
     {
@@ -244,6 +223,26 @@ public class Metriche : MonoBehaviour
             gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
             spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
             spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
+            polsoL.text = manoSx.ToString();
+            polsoR.text = manoDx.ToString();
+            gomitoL.text = gomitoSx.ToString();
+            gomitoR.text = gomitoDx.ToString();
+            spallaL.text = spallaSx.ToString();
+            spallaR.text = spallaDx.ToString();
+
+        if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
+        if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
+        if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
+        if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
+        if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
+=======
+
+            manoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_4.x, arancione[frame_correnteArancione].person_0.joint_4.y, arancione[frame_correnteArancione].person_0.joint_4.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_4.x, biancoGiusto[frame_correnteBianco].person_0.joint_4.y, biancoGiusto[frame_correnteBianco].person_0.joint_4.z));
+            manoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_7.x, arancione[frame_correnteArancione].person_0.joint_7.y, arancione[frame_correnteArancione].person_0.joint_7.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_7.x, biancoGiusto[frame_correnteBianco].person_0.joint_7.y, biancoGiusto[frame_correnteBianco].person_0.joint_7.z));
+            gomitoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_3.x, arancione[frame_correnteArancione].person_0.joint_3.y, arancione[frame_correnteArancione].person_0.joint_3.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_3.x, biancoGiusto[frame_correnteBianco].person_0.joint_3.y, biancoGiusto[frame_correnteBianco].person_0.joint_3.z));
+            gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
+            spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
+            spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
 
         if (frame_correnteArancione == dimBoa * appoggio)
         {
@@ -259,27 +258,7 @@ public class Metriche : MonoBehaviour
         if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
         if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
         if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
-=======
-
-            manoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_4.x, arancione[frame_correnteArancione].person_0.joint_4.y, arancione[frame_correnteArancione].person_0.joint_4.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_4.x, biancoGiusto[frame_correnteBianco].person_0.joint_4.y, biancoGiusto[frame_correnteBianco].person_0.joint_4.z));
-            manoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_7.x, arancione[frame_correnteArancione].person_0.joint_7.y, arancione[frame_correnteArancione].person_0.joint_7.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_7.x, biancoGiusto[frame_correnteBianco].person_0.joint_7.y, biancoGiusto[frame_correnteBianco].person_0.joint_7.z));
-            gomitoSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_3.x, arancione[frame_correnteArancione].person_0.joint_3.y, arancione[frame_correnteArancione].person_0.joint_3.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_3.x, biancoGiusto[frame_correnteBianco].person_0.joint_3.y, biancoGiusto[frame_correnteBianco].person_0.joint_3.z));
-            gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
-            spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
-            spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
-            polsoL.text = manoSx.ToString();
-            polsoR.text = manoDx.ToString();
-            gomitoL.text = gomitoSx.ToString();
-            gomitoR.text = gomitoDx.ToString();
-            spallaL.text = spallaSx.ToString();
-            spallaR.text = spallaDx.ToString();
-
-        if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
-        if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
-        if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
-        if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
-        if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
->>>>>>> 7827ef3dd85024dffa53203cef491ea4edd1b6a5
+>>>>>>> parent of b58b7d0... Merge branch 'master' of https://github.com/querciak/progettoETI_2
         if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
         if ( frame_correnteBianco > 0 ) frame_correnteBianco--;
