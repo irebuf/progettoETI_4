@@ -53,7 +53,7 @@ public class Metriche : MonoBehaviour
         threshold = 0.1f;
         range = 100;
         valoreSoglia.text = ((soglia.value)*10).ToString("F2")+" cm";
-        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
+        valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
     }
 
     public void SistemaSoglia(float newthreshold)
@@ -69,7 +69,7 @@ public class Metriche : MonoBehaviour
     void Update()
     {
         valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
-        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
+        valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
         if (attiva == true)
         {
             if (frame_correnteArancione % frameRate == 0)
@@ -243,7 +243,7 @@ public class Metriche : MonoBehaviour
         if (frame_correnteBianco == biancoGiusto.Count - 1 & frame_correnteArancione == arancione.Count - 1) { frame_correnteArancione++; frame_correnteBianco++; }
 
         valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
-        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
+        valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
     }
     public void frameMinus()
     {
@@ -291,7 +291,7 @@ public class Metriche : MonoBehaviour
         if (frame_correnteArancione > 0) frame_correnteArancione--;
 
         valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
-        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
+        valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
     }
 
     float calcola_distanza(Vector3 posArancione, Vector3 posBianco)
