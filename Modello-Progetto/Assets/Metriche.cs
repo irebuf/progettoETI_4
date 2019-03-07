@@ -203,7 +203,7 @@ public class Metriche : MonoBehaviour
             if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
             Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
             ++appoggio;
-            percentualeSvolto.text = percentuale.ToString();
+            percentualeSvolto.text = percentuale.ToString() + "%";
         }
 
         if (frame_correnteBianco < (biancoGiusto.Count - 1)) frame_correnteBianco++;
