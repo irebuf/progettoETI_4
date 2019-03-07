@@ -19,6 +19,13 @@ public class Metriche : MonoBehaviour
     public Button play;
     public Button pausa;
     public Button framemin;
+    public Text spallaR;
+    public Text gomitoR;
+    public Text polsoR;
+    public Text spallaL;
+    public Text gomitoL;
+    public Text polsoL;
+    public Text percentaleSvolto;
 
     void Start()
     {
@@ -51,7 +58,12 @@ public class Metriche : MonoBehaviour
                 gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_6.x, arancione[frame_correnteArancione / frameRate].person_0.joint_6.y, arancione[frame_correnteArancione / frameRate].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.z));
                 spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_2.x, arancione[frame_correnteArancione / frameRate].person_0.joint_2.y, arancione[frame_correnteArancione / frameRate].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.z));
                 spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_5.x, arancione[frame_correnteArancione / frameRate].person_0.joint_5.y, arancione[frame_correnteArancione / frameRate].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.z));
-
+                polsoL.text = manoSx.ToString();
+                polsoR.text = manoDx.ToString();
+                gomitoL.text = gomitoSx.ToString();
+                gomitoR.text = gomitoDx.ToString();
+                spallaL.text = spallaSx.ToString();
+                spallaR.text = spallaDx.ToString();
             }
             if (frame_correnteBianco < biancoGiusto.Count-1) frame_correnteBianco++;
             if (frame_correnteArancione < arancione.Count-1) frame_correnteArancione++;
@@ -73,6 +85,7 @@ public class Metriche : MonoBehaviour
                 if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa*appoggio + " non è stata rispettata la boa");
                 Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
                 ++appoggio;
+                percentaleSvolto.text = percentuale.ToString();
             }
 
 
@@ -167,6 +180,12 @@ public class Metriche : MonoBehaviour
             gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
             spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
             spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
+            polsoL.text = manoSx.ToString();
+            polsoR.text = manoDx.ToString();
+            gomitoL.text = gomitoSx.ToString();
+            gomitoR.text = gomitoDx.ToString();
+            spallaL.text = spallaSx.ToString();
+            spallaR.text = spallaDx.ToString();
 
         if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
         if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
@@ -200,6 +219,12 @@ public class Metriche : MonoBehaviour
             gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
             spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
             spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
+            polsoL.text = manoSx.ToString();
+            polsoR.text = manoDx.ToString();
+            gomitoL.text = gomitoSx.ToString();
+            gomitoR.text = gomitoDx.ToString();
+            spallaL.text = spallaSx.ToString();
+            spallaR.text = spallaDx.ToString();
 
         if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
         if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
