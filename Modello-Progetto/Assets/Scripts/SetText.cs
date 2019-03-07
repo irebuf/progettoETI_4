@@ -21,13 +21,14 @@ public class SetText : MonoBehaviour
             File.AppendAllText(path, testo.text + '\n');
             Debug.Log("Testo aggiunto");
         }
-        
+        testo.Select();
+        testo.text = "";
        
     }/*
     public void ClearText()
     {
         testo.clear
-    }*/
+    }
     /*
     public void Start()
     {
