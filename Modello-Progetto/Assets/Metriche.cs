@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +26,7 @@ public class Metriche : MonoBehaviour
     public Text gomitoL;
     public Text polsoL;
     public Text percentualeSvolto;
+
 
     void Start()
     {
@@ -58,12 +59,12 @@ public class Metriche : MonoBehaviour
                 gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_6.x, arancione[frame_correnteArancione / frameRate].person_0.joint_6.y, arancione[frame_correnteArancione / frameRate].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_6.z));
                 spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_2.x, arancione[frame_correnteArancione / frameRate].person_0.joint_2.y, arancione[frame_correnteArancione / frameRate].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_2.z));
                 spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione / frameRate].person_0.joint_5.x, arancione[frame_correnteArancione / frameRate].person_0.joint_5.y, arancione[frame_correnteArancione / frameRate].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.x, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.y, biancoGiusto[frame_correnteBianco / frameRate].person_0.joint_5.z));
-                polsoL.text = manoSx.ToString();
-                polsoR.text = manoDx.ToString();
-                gomitoL.text = gomitoSx.ToString();
-                gomitoR.text = gomitoDx.ToString();
-                spallaL.text = spallaSx.ToString();
-                spallaR.text = spallaDx.ToString();
+                polsoL.text = manoSx.ToString("F4");
+                polsoR.text = manoDx.ToString("F4");
+                gomitoL.text = gomitoSx.ToString("F4");
+                gomitoR.text = gomitoDx.ToString("F4");
+                spallaL.text = spallaSx.ToString("F4");
+                spallaR.text = spallaDx.ToString("F4");
             }
             if (frame_correnteBianco < biancoGiusto.Count - 1) frame_correnteBianco++;
             if (frame_correnteArancione < arancione.Count - 1) frame_correnteArancione++;
@@ -85,7 +86,7 @@ public class Metriche : MonoBehaviour
                 if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
                 Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
                 ++appoggio;
-                percentualeSvolto.text = percentuale.ToString();
+                percentualeSvolto.text = percentuale.ToString() + "%";
             }
 
 
@@ -180,12 +181,12 @@ public class Metriche : MonoBehaviour
         gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
         spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
         spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
-        polsoL.text = manoSx.ToString();
-        polsoR.text = manoDx.ToString();
-        gomitoL.text = gomitoSx.ToString();
-        gomitoR.text = gomitoDx.ToString();
-        spallaL.text = spallaSx.ToString();
-        spallaR.text = spallaDx.ToString();
+        polsoL.text = manoSx.ToString("F4");
+        polsoR.text = manoDx.ToString("F4");
+        gomitoL.text = gomitoSx.ToString("F4");
+        gomitoR.text = gomitoDx.ToString("F4");
+        spallaL.text = spallaSx.ToString("F4");
+        spallaR.text = spallaDx.ToString("F4");
 
         if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
         if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
@@ -202,7 +203,7 @@ public class Metriche : MonoBehaviour
             if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
             Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
             ++appoggio;
-            percentualeSvolto.text = percentuale.ToString();
+            percentualeSvolto.text = percentuale.ToString() + "%";
         }
 
         if (frame_correnteBianco < (biancoGiusto.Count - 1)) frame_correnteBianco++;
@@ -230,12 +231,12 @@ public class Metriche : MonoBehaviour
         gomitoDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_6.x, arancione[frame_correnteArancione].person_0.joint_6.y, arancione[frame_correnteArancione].person_0.joint_6.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_6.x, biancoGiusto[frame_correnteBianco].person_0.joint_6.y, biancoGiusto[frame_correnteBianco].person_0.joint_6.z));
         spallaSx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_2.x, arancione[frame_correnteArancione].person_0.joint_2.y, arancione[frame_correnteArancione].person_0.joint_2.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_2.x, biancoGiusto[frame_correnteBianco].person_0.joint_2.y, biancoGiusto[frame_correnteBianco].person_0.joint_2.z));
         spallaDx = calcola_distanza(new Vector3(arancione[frame_correnteArancione].person_0.joint_5.x, arancione[frame_correnteArancione].person_0.joint_5.y, arancione[frame_correnteArancione].person_0.joint_5.z), new Vector3(biancoGiusto[frame_correnteBianco].person_0.joint_5.x, biancoGiusto[frame_correnteBianco].person_0.joint_5.y, biancoGiusto[frame_correnteBianco].person_0.joint_5.z));
-        polsoL.text = manoSx.ToString();
-        polsoR.text = manoDx.ToString();
-        gomitoL.text = gomitoSx.ToString();
-        gomitoR.text = gomitoDx.ToString();
-        spallaL.text = spallaSx.ToString();
-        spallaR.text = spallaDx.ToString();
+        polsoL.text = manoSx.ToString("F4");
+        polsoR.text = manoDx.ToString("F4");
+        gomitoL.text = gomitoSx.ToString("F4");
+        gomitoR.text = gomitoDx.ToString("F4");
+        spallaL.text = spallaSx.ToString("F4");
+        spallaR.text = spallaDx.ToString("F4");
 
         if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
         if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
@@ -244,16 +245,7 @@ public class Metriche : MonoBehaviour
         if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
         if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
-        if (frame_correnteArancione == dimBoa * appoggio)
-        {
-            if (appoggio <= 0 || appoggio > 10) appoggio = 1;
-
-            //Debug.Log("percentuale: " + 10 * appoggio + "%");
-            if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
-            Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
-            ++appoggio;
-            percentualeSvolto.text = percentuale.ToString();
-        }
+       
 
         if (frame_correnteBianco > 0) frame_correnteBianco--;
         if (frame_correnteArancione > 0) frame_correnteArancione--;
