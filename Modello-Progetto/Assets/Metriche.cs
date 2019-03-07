@@ -19,6 +19,7 @@ public class Metriche : MonoBehaviour
     public Button play;
     public Button pausa;
     public Button framemin;
+    
 
     void Start()
     {
@@ -78,11 +79,11 @@ public class Metriche : MonoBehaviour
                 if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
                 Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
                 ++appoggio;
-                percentaleSvolto.text = percentuale.ToString();
+                percentualeSvolto.text = percentuale.ToString();
             }
 
 
-
+        }
     }
 
     bool boa(int nFrame)
