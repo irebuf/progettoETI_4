@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5127,7 +5127,18 @@ MonoBehaviour:
   cilindro9_10: {fileID: 1728256196}
   cilindro11_12: {fileID: 56890823}
   cilindro12_13: {fileID: 1823162929}
-  speremovada: {fileID: 244859491}
+  manodx_: {fileID: 339491957}
+  manosx_: {fileID: 1023758940}
+  gomitodx_: {fileID: 244859491}
+  gomitosx_: {fileID: 756857868}
+  spalladx_: {fileID: 978384183}
+  spallasx_: {fileID: 571434435}
+  manodx: 0
+  manosx: 0
+  gomitodx: 0
+  gomitosx: 0
+  spalladx: 0
+  spallasx: 0
   frames: []
   play: {fileID: 341046998}
   pausa: {fileID: 269721546}
@@ -8378,7 +8389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1706638978
 MonoBehaviour:
   m_ObjectHideFlags: 0

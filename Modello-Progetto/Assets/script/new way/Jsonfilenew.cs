@@ -54,7 +54,19 @@ public class Jsonfilenew : MonoBehaviour
     public GameObject cilindro11_12;
     public GameObject cilindro12_13;
 
-    public Text speremovada;
+    public Text manodx_;
+    public Text manosx_;
+    public Text gomitodx_;
+    public Text gomitosx_;
+    public Text spalladx_;
+    public Text spallasx_;
+    public bool manodx;
+    public bool manosx;
+    public bool gomitodx;
+    public bool gomitosx;
+    public bool spalladx;
+    public bool spallasx;
+
     string pathss;
     public List<Frame> frames = new List<Frame>();
     Persona person_0 = new Persona();
@@ -270,7 +282,20 @@ public class Jsonfilenew : MonoBehaviour
     ////////////////// Update is called once per frame
     void Update()
     {
+        if (manodx_.text == "True") { manodx = true; } else { manodx = false; }
+        if (manosx_.text == "True") { manosx = true; } else { manosx = false; }
+        if (gomitodx_.text == "True") { gomitodx = true; } else { gomitodx = false; }
+        if (gomitosx_.text == "True") { gomitosx = true; } else { gomitosx = false; }
+        if (spalladx_.text == "True") { spalladx = true; } else { spalladx = false; }
+        if (spallasx_.text == "True") { spallasx = true; } else { spallasx = false; }
+
         cspalla12();
+        cman34();
+        cman67();
+        cgom56();
+        cgom23();
+        cspalla15();
+
         if (attiva == true)
         {
 
@@ -315,7 +340,7 @@ public class Jsonfilenew : MonoBehaviour
 
     void cspalla12()
     {
-        if(speremovada)
+        if(spalladx)
          {
           pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
           pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
@@ -324,31 +349,31 @@ public class Jsonfilenew : MonoBehaviour
           }
           else
           {
-          pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          cilindro12.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina1.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          pallina2.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          cilindro12.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
   
         }
          
     }
     void cspalla15()
     {
-        /*if()
+        if(spallasx)
          {
           pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
           pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
           cilindro51.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);          }
           else
           {
-          pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          cilindro51.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina1.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          pallina5.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          cilindro51.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
           }
-         */
+         
     }
     void cgom23()
     {
-        /*if()
+        if(gomitodx)
          {
           pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
           pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
@@ -356,16 +381,16 @@ public class Jsonfilenew : MonoBehaviour
           }
           else
           {
-          pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          cilindro23.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina3.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          pallina2.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          cilindro23.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
 
           }
-         */
+         
     }
     void cgom56()
     {
-        /*if()
+        if(gomitosx)
          {
           pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
           pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
@@ -374,16 +399,16 @@ public class Jsonfilenew : MonoBehaviour
           }
           else
           {
-          pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          cilindro65.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina5.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          pallina6.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          cilindro65.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
 
           }
-         */
+         
     }
     void cman67()
     {
-        /*if()
+        if(manosx)
          {
           pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
           pallina7.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
@@ -392,16 +417,16 @@ public class Jsonfilenew : MonoBehaviour
           }
           else
           {
-          pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          pallina7.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          cilindro67.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina6.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          pallina7.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          cilindro67.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
 
           }
-         */
+         
     }
     void cman34()
     {
-        /*if()
+        if(manodx)
          {
           pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
           pallina4.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
@@ -410,12 +435,12 @@ public class Jsonfilenew : MonoBehaviour
           }
           else
           {
-          pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          pallina4.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-          cilindro34.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina3.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          pallina4.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+          cilindro34.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
 
           }
-         */
+         
     }
     void coloramateriale()
     {
