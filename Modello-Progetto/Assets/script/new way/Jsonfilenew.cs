@@ -289,12 +289,6 @@ public class Jsonfilenew : MonoBehaviour
         if (spalladx_.text == "True") { spalladx = true; } else { spalladx = false; }
         if (spallasx_.text == "True") { spallasx = true; } else { spallasx = false; }
 
-        cspalla12();
-        cman34();
-        cman67();
-        cgom56();
-        cgom23();
-        cspalla15();
 
         if (attiva == true)
         {

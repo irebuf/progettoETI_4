@@ -8389,7 +8389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1706638978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8430,6 +8430,18 @@ MonoBehaviour:
   cilindro9_10: {fileID: 1036758986}
   cilindro11_12: {fileID: 1774147793}
   cilindro12_13: {fileID: 1354499313}
+  manodx_: {fileID: 339491957}
+  manosx_: {fileID: 1023758940}
+  gomitodx_: {fileID: 244859491}
+  gomitosx_: {fileID: 756857868}
+  spalladx_: {fileID: 978384183}
+  spallasx_: {fileID: 571434435}
+  manodx: 0
+  manosx: 0
+  gomitodx: 0
+  gomitosx: 0
+  spalladx: 0
+  spallasx: 0
   frames: []
   play: {fileID: 341046998}
   pausa: {fileID: 269721546}

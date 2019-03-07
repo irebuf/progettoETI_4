@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class biancosbagliato : MonoBehaviour
 {
+
     int q = 0;
     int numframe;
     Vector3 movimento1;
@@ -51,13 +54,21 @@ public class biancosbagliato : MonoBehaviour
     public GameObject cilindro11_12;
     public GameObject cilindro12_13;
 
-
-
+    public Text manodx_;
+    public Text manosx_;
+    public Text gomitodx_;
+    public Text gomitosx_;
+    public Text spalladx_;
+    public Text spallasx_;
+    public bool manodx;
+    public bool manosx;
+    public bool gomitodx;
+    public bool gomitosx;
+    public bool spalladx;
+    public bool spallasx;
 
     string pathss;
     public List<Frame> frames = new List<Frame>();
-
-
     Persona person_0 = new Persona();
     Joint joint = new Joint();
     List<Vector3> vettori1 = new List<Vector3>();
@@ -79,7 +90,7 @@ public class biancosbagliato : MonoBehaviour
     public void tornavettori()
     {
         int n_ele = frames.Count;
-
+        //Debug.Log("dim list jsonnew "+n_ele);
 
 
         for (int k = 0; k < n_ele; k++)
@@ -120,20 +131,10 @@ public class biancosbagliato : MonoBehaviour
         numframe = vettori1.Count;
 
     }
-    public List<Frame> get_data()
-    {
-
-        return frames;
-    }
-    ////////////////// Start is called before the first frame update
-    /*private void Awake()
-   {
-       tornavettori();
-   }*/
     void Start()
     {
-
         pathss = Application.dataPath + "/" + "ominoBiancoSbagliato.json";
+
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
         tornavettori();
@@ -167,12 +168,12 @@ public class biancosbagliato : MonoBehaviour
         pallina12.transform.position = movimento12;
         pallina13.transform.position = movimento13;
 
+
     }
     bool attiva = false;
     public Button play;
     public Button pausa;
     public Button framemin;
-
     public void Parti()
     {
         attiva = true;
@@ -231,7 +232,6 @@ public class biancosbagliato : MonoBehaviour
         if (q > numframe * frame_rate) { q = 0; }
 
     }
-
     public void FrameMinus()
     {
         if (q == 0)
@@ -280,11 +280,23 @@ public class biancosbagliato : MonoBehaviour
         if (q > numframe * frame_rate) { q = 0; }
 
     }
-
-
     ////////////////// Update is called once per frame
     void Update()
     {
+        if (manodx_.text == "True") { manodx = true; } else { manodx = false; }
+        if (manosx_.text == "True") { manosx = true; } else { manosx = false; }
+        if (gomitodx_.text == "True") { gomitodx = true; } else { gomitodx = false; }
+        if (gomitosx_.text == "True") { gomitosx = true; } else { gomitosx = false; }
+        if (spalladx_.text == "True") { spalladx = true; } else { spalladx = false; }
+        if (spallasx_.text == "True") { spallasx = true; } else { spallasx = false; }
+
+        cspalla12();
+        cman34();
+        cman67();
+        cgom56();
+        cgom23();
+        cspalla15();
+
         if (attiva == true)
         {
 
@@ -325,6 +337,112 @@ public class biancosbagliato : MonoBehaviour
             coloramateriale();
 
         }
+    }
+
+    void cspalla12()
+    {
+        if (spalladx)
+        {
+            pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            cilindro12.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+        }
+        else
+        {
+            pallina1.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            pallina2.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            cilindro12.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+
+        }
+
+    }
+    void cspalla15()
+    {
+        if (spallasx)
+        {
+            pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            cilindro51.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+        }
+        else
+        {
+            pallina1.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            pallina5.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            cilindro51.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+        }
+
+    }
+    void cgom23()
+    {
+        if (gomitodx)
+        {
+            pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            cilindro23.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+        }
+        else
+        {
+            pallina3.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            pallina2.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            cilindro23.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+
+        }
+
+    }
+    void cgom56()
+    {
+        if (gomitosx)
+        {
+            pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            cilindro65.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+        }
+        else
+        {
+            pallina5.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            pallina6.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            cilindro65.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+
+        }
+
+    }
+    void cman67()
+    {
+        if (manosx)
+        {
+            pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            pallina7.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            cilindro67.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+        }
+        else
+        {
+            pallina6.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            pallina7.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            cilindro67.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+
+        }
+
+    }
+    void cman34()
+    {
+        if (manodx)
+        {
+            pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            pallina4.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+            cilindro34.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+        }
+        else
+        {
+            pallina3.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            pallina4.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+            cilindro34.GetComponent<Renderer>().material.color = new Color(1, 0, 0, 1);
+
+        }
+
     }
     void coloramateriale()
     {
@@ -396,7 +514,6 @@ public class biancosbagliato : MonoBehaviour
         int i = 0;
         int pos = 0;
 
-        // Debug.Log(contents);
         do
         {
             int ini = contents.IndexOf("frame", pos);
@@ -429,4 +546,5 @@ public class biancosbagliato : MonoBehaviour
             contents = contents.Remove(contents.IndexOf('{', 0) + 1, el - (contents.IndexOf('{', 0) + 2));
         } while (contents.IndexOf("frame", 100) > 0);
     }
+
 }
