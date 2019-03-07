@@ -14,11 +14,12 @@ public class SetText : MonoBehaviour
         string path = Application.dataPath + "/note.txt";
         if (!File.Exists(path))
         {
-            File.WriteAllText(path, testo.text+'\n');
+            File.WriteAllText(path, System.DateTime.Today.Day.ToString() + "/"+ System.DateTime.Today.Month.ToString() + "/" + System.DateTime.Today.Year.ToString()+" "+ testo.text+'\n');
             Debug.Log("Testo nuovo");
         }else
         {
-            File.AppendAllText(path, testo.text + '\n');
+            string current = File.ReadAllText(path);
+            File.WriteAllText(path, System.DateTime.Today.Day.ToString() + "/" + System.DateTime.Today.Month.ToString() + "/" + System.DateTime.Today.Year.ToString() + " "+ testo.text + '\n' + current);
             Debug.Log("Testo aggiunto");
         }
         testo.Select();
