@@ -1,6 +1,6 @@
 # progetto 4 ETI _ Gruppo ISA
 
-Repository Git contenente il necessario per la creazione dell'ambiente per esecuzione di questo software.
+Repository Git contenente il necessario per la creazione dell'ambiente utile ad eseguire questo software.
 
 1. Clonare il progetto sul proprio computer
 
