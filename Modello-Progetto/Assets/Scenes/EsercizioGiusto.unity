@@ -3456,7 +3456,7 @@ MonoBehaviour:
   spallaL: {fileID: 1440009487}
   gomitoL: {fileID: 1783850844}
   polsoL: {fileID: 22000564}
-  percentaleSvolto: {fileID: 274779076}
+  percentualeSvolto: {fileID: 274779076}
 --- !u!4 &936733339
 Transform:
   m_ObjectHideFlags: 0
