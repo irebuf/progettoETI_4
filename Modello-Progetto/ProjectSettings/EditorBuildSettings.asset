@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EsercizioGiusto.unity
     guid: e49d10c75f905e143b07ea940c359e40
+  - enabled: 0
+    path: Assets/Scenes/EXEsercizioSbagliato.unity
+    guid: 35f0659ae9e7eda4b8b238d076d11ad4
   - enabled: 1
     path: Assets/Scenes/EsercizioSbagliato.unity
-    guid: 35f0659ae9e7eda4b8b238d076d11ad4
+    guid: 6b935a1231bc85549aac1dd012ebe87c
   m_configObjects: {}
