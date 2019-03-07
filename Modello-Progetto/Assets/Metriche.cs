@@ -32,6 +32,10 @@ public class Metriche : MonoBehaviour
     public Text boolSpallaSx;
     public Text boolPolsoDx;
     public Text boolPolsoSx;
+    public Slider soglia;
+    public Text valoreSoglia;
+    public Slider finestra;
+    public Text valoreFinestra;
 
     void Start()
     {
@@ -48,11 +52,24 @@ public class Metriche : MonoBehaviour
         frameRate = 1;
         threshold = 0.1f;
         range = 100;
+        valoreSoglia.text = ((soglia.value)*10).ToString("F2")+" cm";
+        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
     }
 
+    public void SistemaSoglia(float newthreshold)
+    {
+        threshold = newthreshold;
+    }
+
+    public void SistemaFinestra(float newRange)
+    {
+        range = Mathf.RoundToInt(newRange);
+    }
 
     void Update()
     {
+        valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
+        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
         if (attiva == true)
         {
             if (frame_correnteArancione % frameRate == 0)
@@ -99,7 +116,7 @@ public class Metriche : MonoBehaviour
                 percentualeSvolto.text = percentuale.ToString() + "%";
             }
 
-
+            
         }
 
 
@@ -224,6 +241,9 @@ public class Metriche : MonoBehaviour
         if (frame_correnteBianco < (biancoGiusto.Count - 1)) frame_correnteBianco++;
         if (frame_correnteArancione < (arancione.Count - 1)) frame_correnteArancione++;
         if (frame_correnteBianco == biancoGiusto.Count - 1 & frame_correnteArancione == arancione.Count - 1) { frame_correnteArancione++; frame_correnteBianco++; }
+
+        valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
+        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
     }
     public void frameMinus()
     {
@@ -269,6 +289,9 @@ public class Metriche : MonoBehaviour
 
         if (frame_correnteBianco > 0) frame_correnteBianco--;
         if (frame_correnteArancione > 0) frame_correnteArancione--;
+
+        valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
+        valoreFinestra.text = ((finestra.value) / 50).ToString("F1") + " sec";
     }
 
     float calcola_distanza(Vector3 posArancione, Vector3 posBianco)
