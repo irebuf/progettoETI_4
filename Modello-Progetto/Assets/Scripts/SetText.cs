@@ -23,7 +23,11 @@ public class SetText : MonoBehaviour
         }
         
        
-    }
+    }/*
+    public void ClearText()
+    {
+        testo.clear
+    }*/
     /*
     public void Start()
     {

@@ -26,7 +26,7 @@ public class Metriche : MonoBehaviour
     public Text gomitoL;
     public Text polsoL;
     public Text percentualeSvolto;
-
+    public Text metricaprova;
 
     void Start()
     {
@@ -76,7 +76,7 @@ public class Metriche : MonoBehaviour
             if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
             if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
             if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
-
+            metricaprova.text = sogliaGomitoDx.ToString();
             //manca la percentuale
             if (frame_correnteArancione == dimBoa * appoggio)
             {
