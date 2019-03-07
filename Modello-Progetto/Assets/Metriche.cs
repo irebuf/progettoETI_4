@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,13 +19,6 @@ public class Metriche : MonoBehaviour
     public Button play;
     public Button pausa;
     public Button framemin;
-    public Text spallaR;
-    public Text gomitoR;
-    public Text polsoR;
-    public Text spallaL;
-    public Text gomitoL;
-    public Text polsoL;
-    public Text percentaleSvolto;
 
     void Start()
     {
@@ -89,9 +82,6 @@ public class Metriche : MonoBehaviour
             }
 
 
-        }
-
-
 
     }
 
@@ -147,8 +137,6 @@ public class Metriche : MonoBehaviour
         {
             return false;
         }
-
-    }
 
     public void parti()
     {
@@ -243,6 +231,10 @@ public class Metriche : MonoBehaviour
         if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
         if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
         if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+
+        if ( frame_correnteBianco > 0 ) frame_correnteBianco--;
+        if ( frame_correnteArancione > 0 ) frame_correnteArancione--;
+    }
 
         if (frame_correnteArancione == dimBoa * appoggio)
         {
