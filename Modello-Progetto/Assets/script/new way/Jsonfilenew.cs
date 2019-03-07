@@ -54,13 +54,9 @@ public class Jsonfilenew : MonoBehaviour
     public GameObject cilindro11_12;
     public GameObject cilindro12_13;
 
-
-
-
+    public Text speremovada;
     string pathss;
     public List<Frame> frames = new List<Frame>();
-
-
     Persona person_0 = new Persona();
     Joint joint = new Joint();
     List<Vector3> vettori1 = new List<Vector3>();
@@ -123,11 +119,6 @@ public class Jsonfilenew : MonoBehaviour
         numframe = vettori1.Count;
 
     }
-
-
-
-
-
     void Start()
     {
         pathss = Application.dataPath + "/" + "ominoArancioneModello.json";
@@ -170,7 +161,6 @@ public class Jsonfilenew : MonoBehaviour
     public Button play;
     public Button pausa;
     public Button framemin;
-
     public void Parti()
     {
         attiva = true;
@@ -229,7 +219,6 @@ public class Jsonfilenew : MonoBehaviour
         if (q > numframe * frame_rate) { q = 0; }
 
     }
-
     public void FrameMinus()
     {
         if (q == 0)
@@ -278,11 +267,10 @@ public class Jsonfilenew : MonoBehaviour
         if (q > numframe * frame_rate) { q = 0; }
 
     }
-
-
     ////////////////// Update is called once per frame
     void Update()
     {
+        cspalla12();
         if (attiva == true)
         {
 
@@ -323,6 +311,111 @@ public class Jsonfilenew : MonoBehaviour
             coloramateriale();
 
         }
+    }
+
+    void cspalla12()
+    {
+        if(speremovada)
+         {
+          pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro12.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+          else
+          {
+          pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro12.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+  
+        }
+         
+    }
+    void cspalla15()
+    {
+        /*if()
+         {
+          pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro51.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);          }
+          else
+          {
+          pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro51.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          }
+         */
+    }
+    void cgom23()
+    {
+        /*if()
+         {
+          pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro23.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          }
+          else
+          {
+          pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro23.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+         */
+    }
+    void cgom56()
+    {
+        /*if()
+         {
+          pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro65.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+          else
+          {
+          pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro65.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+         */
+    }
+    void cman67()
+    {
+        /*if()
+         {
+          pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina7.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro67.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+          else
+          {
+          pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina7.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro67.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+         */
+    }
+    void cman34()
+    {
+        /*if()
+         {
+          pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina4.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro34.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+          else
+          {
+          pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          pallina4.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+          cilindro34.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
+
+          }
+         */
     }
     void coloramateriale()
     {
