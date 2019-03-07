@@ -25,7 +25,7 @@ public class Metriche : MonoBehaviour
     public Text spallaL;
     public Text gomitoL;
     public Text polsoL;
-    public Text percentaleSvolto;
+    public Text percentualeSvolto;
 
     void Start()
     {
@@ -85,7 +85,7 @@ public class Metriche : MonoBehaviour
                 if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
                 Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
                 ++appoggio;
-                percentaleSvolto.text = percentuale.ToString();
+                percentualeSvolto.text = percentuale.ToString();
             }
 
 
@@ -202,7 +202,7 @@ public class Metriche : MonoBehaviour
             if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
             Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
             ++appoggio;
-            percentaleSvolto.text = percentuale.ToString();
+            percentualeSvolto.text = percentuale.ToString();
         }
 
         if (frame_correnteBianco < (biancoGiusto.Count - 1)) frame_correnteBianco++;
@@ -252,7 +252,7 @@ public class Metriche : MonoBehaviour
             if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
             Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
             ++appoggio;
-            percentaleSvolto.text = percentuale.ToString();
+            percentualeSvolto.text = percentuale.ToString();
         }
 
         if (frame_correnteBianco > 0) frame_correnteBianco--;
