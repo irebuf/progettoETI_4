@@ -2588,7 +2588,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mano 4
+  m_Text: 28/02/19 Braccio Sx
 --- !u!222 &598201604
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6300,7 +6300,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 982051380}
   m_HandleRect: {fileID: 982051379}
   m_Direction: 2
-  m_Value: 0.9976812
+  m_Value: 0.9976813
   m_Size: 0.5149798
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -7061,7 +7061,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mano 2
+  m_Text: 05/03/19 Braccio Sx
 --- !u!222 &1332288748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8208,7 +8208,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mano 1
+  m_Text: 10/03/19 Braccio Sx
 --- !u!222 &1506238483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8309,7 +8309,7 @@ GameObject:
   - component: {fileID: 1549252201}
   - component: {fileID: 1549252200}
   m_Layer: 5
-  m_Name: EsercizioMano
+  m_Name: EsercizioBraccio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8890,7 +8890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Esercizio Mano
+  m_Text: Esercizio Braccio
 --- !u!222 &1657932272
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9543,7 +9543,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mano 5
+  m_Text: 17/02/19 Braccio Sx
 --- !u!222 &1744435627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9701,7 +9701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mano 3
+  m_Text: 23/02/19 Braccio Sx
 --- !u!222 &1768958628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10119,7 +10119,7 @@ MonoBehaviour:
 
     <size=%10>
 
-    <size=%20>Frattura clavicola dx
+    <size=%20>Frattura clavicola sx
 
 
 '
@@ -10952,7 +10952,7 @@ GameObject:
   - component: {fileID: 2090008073}
   - component: {fileID: 2090008072}
   m_Layer: 5
-  m_Name: Mano
+  m_Name: Braccio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
