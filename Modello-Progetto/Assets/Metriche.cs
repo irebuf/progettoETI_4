@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Metriche : MonoBehaviour
 {
     public int range;
+    const int cosa = 15;
     public List<Frame> arancione, biancoGiusto;
     string pathArancione;
     string pathBianco;
@@ -50,9 +51,9 @@ public class Metriche : MonoBehaviour
         acquisisci_frame(contentBianco, ref biancoGiusto);
         dimBoa = arancione.Count / 10;
         frameRate = 1;
-        threshold = 0.1f;
+        threshold = 0.2f;
         range = 100;
-        valoreSoglia.text = ((soglia.value)*10).ToString("F2")+" cm";
+        valoreSoglia.text = ((soglia.value) * cosa).ToString("F2")+" cm";
         valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
     }
 
@@ -68,7 +69,7 @@ public class Metriche : MonoBehaviour
 
     void Update()
     {
-        valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
+        valoreSoglia.text = ((soglia.value) * cosa).ToString("F2") + " cm";
         valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
         if (attiva == true)
         {
@@ -92,12 +93,12 @@ public class Metriche : MonoBehaviour
             if (frame_correnteArancione < arancione.Count - 1) frame_correnteArancione++;
             if (frame_correnteBianco == biancoGiusto.Count - 1 && frame_correnteArancione == arancione.Count - 1) { ferma(); frame_correnteArancione = 0; frame_correnteBianco = 0; appoggio = 1; percentuale = 0; }
 
-            if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
-            if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
-            if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
-            if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
-            if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
-            if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+            if (manoSx < threshold/2) sogliaManoSx = true; else sogliaManoSx = false;
+            if (manoDx < threshold / 2) sogliaManoDx = true; else sogliaManoDx = false;
+            if (gomitoSx < threshold / 2) sogliaGomitoSx = true; else sogliaGomitoSx = false;
+            if (gomitoDx < threshold / 2) sogliaGomitoDx = true; else sogliaGomitoDx = false;
+            if (spallaSx < threshold / 2) sogliaSpallaSx = true; else sogliaSpallaSx = false;
+            if (spallaDx < threshold / 2) sogliaSpallaDx = true; else sogliaSpallaDx = false;
             boolGomitoDx.text = sogliaGomitoSx.ToString();
             boolGomitoSx.text = sogliaGomitoDx.ToString();
             boolSpallaDx.text = sogliaSpallaSx.ToString();
@@ -110,8 +111,8 @@ public class Metriche : MonoBehaviour
                 if (appoggio <= 0 || appoggio > 10) appoggio = 1;
 
                 //Debug.Log("percentuale: " + 10 * appoggio + "%");
-                if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
-                Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
+                if (boa(dimBoa * appoggio) == true) percentuale += 10; //else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
+                //Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
                 ++appoggio;
                 percentualeSvolto.text = percentuale.ToString() + "%";
             }
@@ -130,7 +131,7 @@ public class Metriche : MonoBehaviour
         {
             for (int j = 0; j < range * 2 / 3; ++j)
             {
-                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold / 2)
                 {
                     i += 1;
                 }
@@ -140,7 +141,7 @@ public class Metriche : MonoBehaviour
         {
             for (int j = nFrame - range / 2; j < arancione.Count - 1; ++j)
             {
-                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold / 2)
                 {
                     i += 1;
                 }
@@ -150,7 +151,7 @@ public class Metriche : MonoBehaviour
         {
             for (int j = nFrame - range / 2; j < biancoGiusto.Count - 1; ++j)
             {
-                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold / 2)
                 {
                     i += 1;
                 }
@@ -160,7 +161,7 @@ public class Metriche : MonoBehaviour
         {
             for (int j = nFrame - range / 2 + 1; j < nFrame + range / 2; ++j)
             {
-                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold)
+                if (calcola_distanza(new Vector3(arancione[nFrame].person_0.joint_4.x, arancione[nFrame].person_0.joint_4.y, arancione[nFrame].person_0.joint_4.z), new Vector3(biancoGiusto[j].person_0.joint_4.x, biancoGiusto[j].person_0.joint_4.y, biancoGiusto[j].person_0.joint_4.z)) < threshold / 2)
                 {
                     i += 1;
                 }
@@ -215,12 +216,12 @@ public class Metriche : MonoBehaviour
         spallaL.text = spallaSx.ToString("F4");
         spallaR.text = spallaDx.ToString("F4");
 
-        if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
-        if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
-        if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
-        if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
-        if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
-        if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+        if (manoSx < threshold / 2) sogliaManoSx = true; else sogliaManoSx = false;
+        if (manoDx < threshold / 2) sogliaManoDx = true; else sogliaManoDx = false;
+        if (gomitoSx < threshold / 2) sogliaGomitoSx = true; else sogliaGomitoSx = false;
+        if (gomitoDx < threshold / 2) sogliaGomitoDx = true; else sogliaGomitoDx = false;
+        if (spallaSx < threshold / 2) sogliaSpallaSx = true; else sogliaSpallaSx = false;
+        if (spallaDx < threshold / 2) sogliaSpallaDx = true; else sogliaSpallaDx = false;
         boolGomitoDx.text = sogliaGomitoSx.ToString();
         boolGomitoSx.text = sogliaGomitoDx.ToString();
         boolSpallaDx.text = sogliaSpallaSx.ToString();
@@ -232,8 +233,8 @@ public class Metriche : MonoBehaviour
             if (appoggio <= 0 || appoggio > 10) appoggio = 1;
 
             //Debug.Log("percentuale: " + 10 * appoggio + "%");
-            if (boa(dimBoa * appoggio) == true) percentuale += 10; else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
-            Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
+            if (boa(dimBoa * appoggio) == true) percentuale += 10; //else Debug.Log("al frame " + dimBoa * appoggio + " non è stata rispettata la boa");
+            //Debug.Log("numero Boa: " + appoggio + " percentuale: " + percentuale + "%");
             ++appoggio;
             percentualeSvolto.text = percentuale.ToString() + "%";
         }
@@ -242,7 +243,7 @@ public class Metriche : MonoBehaviour
         if (frame_correnteArancione < (arancione.Count - 1)) frame_correnteArancione++;
         if (frame_correnteBianco == biancoGiusto.Count - 1 & frame_correnteArancione == arancione.Count - 1) { frame_correnteArancione++; frame_correnteBianco++; }
 
-        valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
+        valoreSoglia.text = ((soglia.value) * cosa).ToString("F2") + " cm";
         valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
     }
     public void frameMinus()
@@ -273,12 +274,12 @@ public class Metriche : MonoBehaviour
         spallaL.text = spallaSx.ToString("F4");
         spallaR.text = spallaDx.ToString("F4");
 
-        if (manoSx < threshold) sogliaManoSx = true; else sogliaManoSx = false;
-        if (manoDx < threshold) sogliaManoDx = true; else sogliaManoDx = false;
-        if (gomitoSx < threshold) sogliaGomitoSx = true; else sogliaGomitoSx = false;
-        if (gomitoDx < threshold) sogliaGomitoDx = true; else sogliaGomitoDx = false;
-        if (spallaSx < threshold) sogliaSpallaSx = true; else sogliaSpallaSx = false;
-        if (spallaDx < threshold) sogliaSpallaDx = true; else sogliaSpallaDx = false;
+        if (manoSx < threshold / 2) sogliaManoSx = true; else sogliaManoSx = false;
+        if (manoDx < threshold / 2) sogliaManoDx = true; else sogliaManoDx = false;
+        if (gomitoSx < threshold / 2) sogliaGomitoSx = true; else sogliaGomitoSx = false;
+        if (gomitoDx < threshold / 2) sogliaGomitoDx = true; else sogliaGomitoDx = false;
+        if (spallaSx < threshold / 2) sogliaSpallaSx = true; else sogliaSpallaSx = false;
+        if (spallaDx < threshold / 2) sogliaSpallaDx = true; else sogliaSpallaDx = false;
 
         boolGomitoDx.text = sogliaGomitoSx.ToString();
         boolGomitoSx.text = sogliaGomitoDx.ToString();
@@ -290,7 +291,7 @@ public class Metriche : MonoBehaviour
         if (frame_correnteBianco > 0) frame_correnteBianco--;
         if (frame_correnteArancione > 0) frame_correnteArancione--;
 
-        valoreSoglia.text = ((soglia.value) * 10).ToString("F2") + " cm";
+        valoreSoglia.text = ((soglia.value) * cosa).ToString("F2") + " cm";
         valoreFinestra.text = ((finestra.value) / 80).ToString("F1") + " sec";
     }
 
