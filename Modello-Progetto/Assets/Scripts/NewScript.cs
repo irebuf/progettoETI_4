@@ -1,21 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewScript : MonoBehaviour
 {
+   
     public void EsercizioGiusto()
     {
-        Application.LoadLevel("EsercizioGiusto");
+        SceneManager.LoadScene("EsercizioGiusto");
     }
 
     public void EsercizioSbagliato()
     {
-        Application.LoadLevel("EsercizioSbagliato");
+        SceneManager.LoadScene("EsercizioSbagliato");
     }
 
     public void HomePage()
     {
-        Application.LoadLevel("HomePage");
+        SceneManager.LoadScene("HomePage");
     }
 }
