@@ -334,7 +334,7 @@ public class biancogiusto : MonoBehaviour
             }
             q++;
             if (q >= numframe * frame_rate) { Ferma(); q = 0; }
-            coloramateriale();
+            
 
         }
     }
@@ -443,71 +443,6 @@ public class biancogiusto : MonoBehaviour
 
         }
 
-    }
-    void coloramateriale()
-    {
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina4.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina7.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina8.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina9.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina10.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina11.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina12.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            pallina13.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            testa.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro12.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro23.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro34.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro51.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro65.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro67.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro8_11.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro1_8.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro1_11.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro9_8.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro9_10.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro11_12.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-            cilindro12_13.GetComponent<Renderer>().material.color = new Color(0, 1, 0, 1);
-
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            pallina1.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina2.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina3.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina4.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina5.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina6.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina7.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina8.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina9.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina10.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina11.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina12.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            pallina13.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            testa.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro12.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro23.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro34.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro51.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro65.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro67.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro8_11.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro1_8.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro1_11.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro9_8.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro9_10.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro11_12.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-            cilindro12_13.GetComponent<Renderer>().material.color = new Color(0, 1, 1, 1);
-        }
     }
     string sostituisci_frame(string contents)
     {
