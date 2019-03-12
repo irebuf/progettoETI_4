@@ -11,7 +11,7 @@ public class SetText : MonoBehaviour
 
     public void CreateText()
     {
-        string path = Application.dataPath + "/note.txt";
+        string path =/* Application.dataPath +*/ "note.txt";
         if (!File.Exists(path))
         {
             File.WriteAllText(path, System.DateTime.Today.Day.ToString() + "/"+ System.DateTime.Today.Month.ToString() + "/" + System.DateTime.Today.Year.ToString()+" "+ testo.text+'\n');
@@ -25,26 +25,5 @@ public class SetText : MonoBehaviour
         testo.Select();
         testo.text = "";
        
-    }/*
-    public void ClearText()
-    {
-        testo.clear
     }
-    /*
-    public void Start()
-    {
-        CreateText();
-    }
-
-    public void Update()
-    {
-        CreateText();
-    }
-
-
-    public void setget()
-    {
-        print("Inserisci note");
-    }
-    */
 }

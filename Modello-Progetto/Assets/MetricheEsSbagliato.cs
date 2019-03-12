@@ -41,8 +41,8 @@ public class MetricheEsSbagliato : MonoBehaviour
 
     void Start()
     {
-        pathArancione = Application.dataPath + "/" + "ominoArancioneModello.json";
-        pathBianco = Application.dataPath + "/" + "ominoBiancoSbagliato.json";
+        pathArancione =/* Application.dataPath + "/" +*/ "ominoArancioneModello.json";
+        pathBianco = /*Application.dataPath + "/" +*/ "ominoBiancoSbagliato.json";
         arancione = new List<Frame>();
         biancoSbagliato = new List<Frame>();
         appoggio = 1;
