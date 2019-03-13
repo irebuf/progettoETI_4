@@ -2,7 +2,7 @@
 
 Repository Git contenente il necessario per la creazione dell'ambiente utile ad eseguire questo software.
 
-1. Scaricare il progetto in formato zip sul proprio computer
+1. Scaricare la release in formato zip sul proprio computer
       - dopo aver decompresso la cartella spostarsi all'interno cartella Modello-Progetto, dove si trova la cartella
         Eseguibile, entrando in quest'ultima e cliccando su Modello-Progetto.exe partirà la demo
       - selezionare qualità media, i tempi di caricamento degli esercizi possono essere decisamente lunghi a seconda della
