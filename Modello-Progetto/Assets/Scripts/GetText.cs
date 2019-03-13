@@ -24,8 +24,8 @@ public class GetText : MonoBehaviour
         textCont = textAss.text;
         textComp.text = textAss.text;
         */
-        //textComp.text = System.IO.File.ReadAllText("Assets/note.txt");
-        textComp.text = System.IO.File.ReadAllText("note.txt");
+        textComp.text = System.IO.File.ReadAllText("Assets/note.txt");
+        //textComp.text = System.IO.File.ReadAllText("note.txt");
     }
     /*
     // Update is called once per frame

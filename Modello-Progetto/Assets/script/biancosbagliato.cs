@@ -133,8 +133,8 @@ public class biancosbagliato : MonoBehaviour
     }
     void Start()
     {
-        //pathss = Application.dataPath + "/" + "ominoBiancoSbagliato.json";
-        pathss = "ominoBiancoSbagliato.json";
+        pathss = Application.dataPath + "/" + "ominoBiancoSbagliato.json";
+        //pathss = "ominoBiancoSbagliato.json";
         string contents = System.IO.File.ReadAllText(pathss);
         acquisisci_frame(contents);
         tornavettori();

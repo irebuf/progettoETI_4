@@ -11,7 +11,7 @@ public class SetText : MonoBehaviour
 
     public void CreateText()
     {
-        string path =/* Application.dataPath +*/ "note.txt";
+        string path = Application.dataPath + "/" + "note.txt";
         if (!File.Exists(path))
         {
             File.WriteAllText(path, System.DateTime.Today.Day.ToString() + "/"+ System.DateTime.Today.Month.ToString() + "/" + System.DateTime.Today.Year.ToString()+" "+ testo.text+'\n');
