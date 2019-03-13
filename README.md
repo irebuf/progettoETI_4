@@ -6,4 +6,4 @@ Repository Git contenente il necessario per la creazione dell'ambiente utile ad 
 
 2. Installare Unity per aprire il progetto sorgente
 
-3. Installare l'eseguibile per provare una versione semi-finale dell'applicazione
+3. Installare l'eseguibile per provare una versione demo dell'applicazione
