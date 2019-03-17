@@ -4,18 +4,18 @@ Repository Git contenente il necessario per eseguire questo software su sistema 
 
 1. ESECUZIONE (solo Windows):
       - scaricare la release in formato zip sul proprio computer
-      - dopo aver decompresso la cartella spostarsi all'interno cartella Modello-Progetto, dove si trova la cartella
-        Eseguibile, entrando in quest'ultima e cliccando su Modello-Progetto.exe partirà la demo
-      - selezionare qualità media, i tempi di caricamento degli esercizi possono essere decisamente lunghi a seconda della
+      - dopo averla decompressa spostarsi all'interno della cartella 'Modello-Progetto', dove si trova la cartella
+        'Eseguibile', entrando in quest'ultima e cliccando su 'Modello-Progetto.exe' partirà la demo
+      - selezionare qualità media, i tempi di caricamento degli esercizi possono essere lunghi a seconda della
         macchina su cui si sta eseguendo il software
-      - dalla schermata di Home Page si può accedere a Esercizio Braccio, si aprirà un secondo box da cui solo i primi due
-        esercizi sono funzionanti
+      - dalla schermata 'Home Page' si può clickare su 'Esercizio Braccio', si aprirà un secondo box da cui solo i primi due
+        esercizi sono abilitati
       - il più recente è l'ultimo esercizio svolto dal paziente dove mostra segni di miglioramento rispetto alla sessione
         della settimana precedente
-      - è inoltre presente una cartella chiamata SCRIPTSforEVERYONE dove è possibile visionare comodamente i principali
+      - è inoltre presente una cartella chiamata 'SCRIPTSforEVERYONE' dove è possibile visionare comodamente i principali
         scripts utilizzati dal programma
 
-2. SOUCE CODE (macOS, linux e Windows):
+2. SOURCE CODE (macOS, linux e Windows):
       - scaricare il file zip dell'intero progetto e installare Unity per aprirlo
-      - aprire Unity e importare la cartella contenente il progetto, quindi aprirlo
+      - aprire Unity e importare la cartella decompressa contenente il progetto, quindi aprirlo
 
