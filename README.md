@@ -1,8 +1,9 @@
 # progetto 4 ETI _ Gruppo ISA
 
-Repository Git contenente il necessario per la creazione dell'ambiente utile ad eseguire questo software su sistema operativo Windows.
+Repository Git contenente il necessario per eseguire questo software su sistema operativo Windows e a ricreare l'ambiente di sviluppo sui 3 sistemi operativi principali (macOS, linux e Windows).
 
-1. Scaricare la release in formato zip sul proprio computer
+1. ESECUZIONE (solo Windows):
+      - scaricare la release in formato zip sul proprio computer
       - dopo aver decompresso la cartella spostarsi all'interno cartella Modello-Progetto, dove si trova la cartella
         Eseguibile, entrando in quest'ultima e cliccando su Modello-Progetto.exe partirà la demo
       - selezionare qualità media, i tempi di caricamento degli esercizi possono essere decisamente lunghi a seconda della
@@ -14,6 +15,7 @@ Repository Git contenente il necessario per la creazione dell'ambiente utile ad 
       - è inoltre presente una cartella chiamata SCRIPTSforEVERYONE dove è possibile visionare comodamente i principali
         scripts utilizzati dal programma
 
-2. Installare Unity per aprire il progetto sorgente
+2. SOUCE CODE (macOS, linux e Windows):
+      - scaricare il file zip dell'intero progetto e installare Unity per aprirlo
       - aprire Unity e importare la cartella contenente il progetto, quindi aprirlo
 
