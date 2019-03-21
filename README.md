@@ -8,9 +8,9 @@ Repository Git contenente il necessario per eseguire questo software su sistema 
         'Eseguibile', entrando in quest'ultima e cliccando su 'Modello-Progetto.exe' partirà la demo
       - selezionare qualità media, i tempi di caricamento degli esercizi possono essere lunghi a seconda della
         macchina su cui si sta eseguendo il software
-      - dalla schermata 'Home Page' si può clickare su 'Esercizio Braccio', si aprirà un secondo box da cui solo i primi due
+      - dalla schermata 'Home Page' si può clickare su 'Esercizio Braccio', si aprirà un secondo box in cui solo i primi due
         esercizi sono abilitati
-      - il più recente è l'ultimo esercizio svolto dal paziente dove mostra segni di miglioramento rispetto alla sessione
+      - il primo è l'ultimo esercizio svolto dal paziente dove mostra segni di miglioramento rispetto alla sessione
         della settimana precedente
       - è inoltre presente una cartella chiamata 'SCRIPTSforEVERYONE' dove è possibile visionare comodamente i principali
         scripts utilizzati dal programma
